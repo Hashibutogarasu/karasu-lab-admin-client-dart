@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **description** | **String** |  | [optional] 
 **subName** | **String** |  | [optional] 
+**iconUrl** | **String** |  | [optional] 
+**thumbnailUrl** | **String** |  | [optional] 
 **skills** | [**BuiltList&lt;Hi3CharactersControllerCreateRequestSkillsInner&gt;**](Hi3CharactersControllerCreateRequestSkillsInner.md) |  | [optional] 
 **weapons** | [**BuiltList&lt;Hi3CharactersControllerCreateRequestWeaponsInner&gt;**](Hi3CharactersControllerCreateRequestWeaponsInner.md) |  | [optional] 
 **stigmatas** | [**BuiltList&lt;Hi3CharactersControllerUpdateRequestStigmatasInner&gt;**](Hi3CharactersControllerUpdateRequestStigmatasInner.md) |  | [optional] 

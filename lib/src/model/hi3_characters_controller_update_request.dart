@@ -18,6 +18,8 @@ part 'hi3_characters_controller_update_request.g.dart';
 /// * [name] 
 /// * [description] 
 /// * [subName] 
+/// * [iconUrl] 
+/// * [thumbnailUrl] 
 /// * [skills] 
 /// * [weapons] 
 /// * [stigmatas] 
@@ -25,13 +27,19 @@ part 'hi3_characters_controller_update_request.g.dart';
 @BuiltValue()
 abstract class Hi3CharactersControllerUpdateRequest implements Built<Hi3CharactersControllerUpdateRequest, Hi3CharactersControllerUpdateRequestBuilder> {
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String? get name;
 
   @BuiltValueField(wireName: r'description')
   String? get description;
 
   @BuiltValueField(wireName: r'sub_name')
   String? get subName;
+
+  @BuiltValueField(wireName: r'icon_url')
+  String? get iconUrl;
+
+  @BuiltValueField(wireName: r'thumbnail_url')
+  String? get thumbnailUrl;
 
   @BuiltValueField(wireName: r'skills')
   BuiltList<Hi3CharactersControllerUpdateRequestSkillsInner?>? get skills;
@@ -68,11 +76,13 @@ class _$Hi3CharactersControllerUpdateRequestSerializer implements PrimitiveSeria
     Hi3CharactersControllerUpdateRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'name';
-    yield serializers.serialize(
-      object.name,
-      specifiedType: const FullType(String),
-    );
+    if (object.name != null) {
+      yield r'name';
+      yield serializers.serialize(
+        object.name,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
     if (object.description != null) {
       yield r'description';
       yield serializers.serialize(
@@ -84,6 +94,20 @@ class _$Hi3CharactersControllerUpdateRequestSerializer implements PrimitiveSeria
       yield r'sub_name';
       yield serializers.serialize(
         object.subName,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.iconUrl != null) {
+      yield r'icon_url';
+      yield serializers.serialize(
+        object.iconUrl,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.thumbnailUrl != null) {
+      yield r'thumbnail_url';
+      yield serializers.serialize(
+        object.thumbnailUrl,
         specifiedType: const FullType.nullable(String),
       );
     }
@@ -137,8 +161,9 @@ class _$Hi3CharactersControllerUpdateRequestSerializer implements PrimitiveSeria
         case r'name':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
           result.name = valueDes;
           break;
         case r'description':
@@ -156,6 +181,22 @@ class _$Hi3CharactersControllerUpdateRequestSerializer implements PrimitiveSeria
           ) as String?;
           if (valueDes == null) continue;
           result.subName = valueDes;
+          break;
+        case r'icon_url':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.iconUrl = valueDes;
+          break;
+        case r'thumbnail_url':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.thumbnailUrl = valueDes;
           break;
         case r'skills':
           final valueDes = serializers.deserialize(

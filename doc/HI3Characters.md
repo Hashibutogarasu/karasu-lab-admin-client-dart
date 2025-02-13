@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **id** | **String** |  | 
 **name** | **String** |  | 
 **subName** | **String** |  | [optional] 
+**iconUrl** | **String** |  | [optional] 
+**thumbnailUrl** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **createdAt** | [**DateTime**](DateTime.md) |  | 
 **updatedAt** | [**DateTime**](DateTime.md) |  | 

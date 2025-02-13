@@ -8,9 +8,11 @@ import 'package:karasu_lab_admin_client/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | 
+**name** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **subName** | **String** |  | [optional] 
+**iconUrl** | **String** |  | [optional] 
+**thumbnailUrl** | **String** |  | [optional] 
 **skills** | [**BuiltList&lt;Hi3CharactersControllerUpdateRequestSkillsInner&gt;**](Hi3CharactersControllerUpdateRequestSkillsInner.md) |  | [optional] 
 **weapons** | [**BuiltList&lt;Hi3CharactersControllerUpdateRequestWeaponsInner&gt;**](Hi3CharactersControllerUpdateRequestWeaponsInner.md) |  | 
 **stigmatas** | [**BuiltList&lt;Hi3CharactersControllerUpdateRequestStigmatasInner&gt;**](Hi3CharactersControllerUpdateRequestStigmatasInner.md) |  | [optional] 

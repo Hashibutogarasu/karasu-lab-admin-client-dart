@@ -9,11 +9,15 @@ part of 'hi3_characters_controller_update_request.dart';
 class _$Hi3CharactersControllerUpdateRequest
     extends Hi3CharactersControllerUpdateRequest {
   @override
-  final String name;
+  final String? name;
   @override
   final String? description;
   @override
   final String? subName;
+  @override
+  final String? iconUrl;
+  @override
+  final String? thumbnailUrl;
   @override
   final BuiltList<Hi3CharactersControllerUpdateRequestSkillsInner?>? skills;
   @override
@@ -31,16 +35,16 @@ class _$Hi3CharactersControllerUpdateRequest
           ._build();
 
   _$Hi3CharactersControllerUpdateRequest._(
-      {required this.name,
+      {this.name,
       this.description,
       this.subName,
+      this.iconUrl,
+      this.thumbnailUrl,
       this.skills,
       required this.weapons,
       this.stigmatas,
       required this.id})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        name, r'Hi3CharactersControllerUpdateRequest', 'name');
     BuiltValueNullFieldError.checkNotNull(
         weapons, r'Hi3CharactersControllerUpdateRequest', 'weapons');
     BuiltValueNullFieldError.checkNotNull(
@@ -63,6 +67,8 @@ class _$Hi3CharactersControllerUpdateRequest
         name == other.name &&
         description == other.description &&
         subName == other.subName &&
+        iconUrl == other.iconUrl &&
+        thumbnailUrl == other.thumbnailUrl &&
         skills == other.skills &&
         weapons == other.weapons &&
         stigmatas == other.stigmatas &&
@@ -75,6 +81,8 @@ class _$Hi3CharactersControllerUpdateRequest
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, subName.hashCode);
+    _$hash = $jc(_$hash, iconUrl.hashCode);
+    _$hash = $jc(_$hash, thumbnailUrl.hashCode);
     _$hash = $jc(_$hash, skills.hashCode);
     _$hash = $jc(_$hash, weapons.hashCode);
     _$hash = $jc(_$hash, stigmatas.hashCode);
@@ -89,6 +97,8 @@ class _$Hi3CharactersControllerUpdateRequest
           ..add('name', name)
           ..add('description', description)
           ..add('subName', subName)
+          ..add('iconUrl', iconUrl)
+          ..add('thumbnailUrl', thumbnailUrl)
           ..add('skills', skills)
           ..add('weapons', weapons)
           ..add('stigmatas', stigmatas)
@@ -114,6 +124,14 @@ class Hi3CharactersControllerUpdateRequestBuilder
   String? _subName;
   String? get subName => _$this._subName;
   set subName(String? subName) => _$this._subName = subName;
+
+  String? _iconUrl;
+  String? get iconUrl => _$this._iconUrl;
+  set iconUrl(String? iconUrl) => _$this._iconUrl = iconUrl;
+
+  String? _thumbnailUrl;
+  String? get thumbnailUrl => _$this._thumbnailUrl;
+  set thumbnailUrl(String? thumbnailUrl) => _$this._thumbnailUrl = thumbnailUrl;
 
   ListBuilder<Hi3CharactersControllerUpdateRequestSkillsInner?>? _skills;
   ListBuilder<Hi3CharactersControllerUpdateRequestSkillsInner?> get skills =>
@@ -156,6 +174,8 @@ class Hi3CharactersControllerUpdateRequestBuilder
       _name = $v.name;
       _description = $v.description;
       _subName = $v.subName;
+      _iconUrl = $v.iconUrl;
+      _thumbnailUrl = $v.thumbnailUrl;
       _skills = $v.skills?.toBuilder();
       _weapons = $v.weapons.toBuilder();
       _stigmatas = $v.stigmatas?.toBuilder();
@@ -185,10 +205,11 @@ class Hi3CharactersControllerUpdateRequestBuilder
     try {
       _$result = _$v ??
           new _$Hi3CharactersControllerUpdateRequest._(
-              name: BuiltValueNullFieldError.checkNotNull(
-                  name, r'Hi3CharactersControllerUpdateRequest', 'name'),
+              name: name,
               description: description,
               subName: subName,
+              iconUrl: iconUrl,
+              thumbnailUrl: thumbnailUrl,
               skills: _skills?.build(),
               weapons: weapons.build(),
               stigmatas: _stigmatas?.build(),

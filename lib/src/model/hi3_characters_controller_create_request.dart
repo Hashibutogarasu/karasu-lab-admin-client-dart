@@ -18,6 +18,8 @@ part 'hi3_characters_controller_create_request.g.dart';
 /// * [name] 
 /// * [description] 
 /// * [subName] 
+/// * [iconUrl] 
+/// * [thumbnailUrl] 
 /// * [skills] 
 /// * [weapons] 
 /// * [stigmatas] 
@@ -31,6 +33,12 @@ abstract class Hi3CharactersControllerCreateRequest implements Built<Hi3Characte
 
   @BuiltValueField(wireName: r'sub_name')
   String? get subName;
+
+  @BuiltValueField(wireName: r'icon_url')
+  String? get iconUrl;
+
+  @BuiltValueField(wireName: r'thumbnail_url')
+  String? get thumbnailUrl;
 
   @BuiltValueField(wireName: r'skills')
   BuiltList<Hi3CharactersControllerCreateRequestSkillsInner?>? get skills;
@@ -80,6 +88,20 @@ class _$Hi3CharactersControllerCreateRequestSerializer implements PrimitiveSeria
       yield r'sub_name';
       yield serializers.serialize(
         object.subName,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.iconUrl != null) {
+      yield r'icon_url';
+      yield serializers.serialize(
+        object.iconUrl,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.thumbnailUrl != null) {
+      yield r'thumbnail_url';
+      yield serializers.serialize(
+        object.thumbnailUrl,
         specifiedType: const FullType.nullable(String),
       );
     }
@@ -149,6 +171,22 @@ class _$Hi3CharactersControllerCreateRequestSerializer implements PrimitiveSeria
           ) as String?;
           if (valueDes == null) continue;
           result.subName = valueDes;
+          break;
+        case r'icon_url':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.iconUrl = valueDes;
+          break;
+        case r'thumbnail_url':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.thumbnailUrl = valueDes;
           break;
         case r'skills':
           final valueDes = serializers.deserialize(

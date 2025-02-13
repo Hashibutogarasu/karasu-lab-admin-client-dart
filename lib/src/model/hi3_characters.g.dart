@@ -14,6 +14,10 @@ class _$HI3Characters extends HI3Characters {
   @override
   final String? subName;
   @override
+  final String? iconUrl;
+  @override
+  final String? thumbnailUrl;
+  @override
   final String? description;
   @override
   final DateTime createdAt;
@@ -33,6 +37,8 @@ class _$HI3Characters extends HI3Characters {
       {required this.id,
       required this.name,
       this.subName,
+      this.iconUrl,
+      this.thumbnailUrl,
       this.description,
       required this.createdAt,
       required this.updatedAt,
@@ -62,6 +68,8 @@ class _$HI3Characters extends HI3Characters {
         id == other.id &&
         name == other.name &&
         subName == other.subName &&
+        iconUrl == other.iconUrl &&
+        thumbnailUrl == other.thumbnailUrl &&
         description == other.description &&
         createdAt == other.createdAt &&
         updatedAt == other.updatedAt &&
@@ -76,6 +84,8 @@ class _$HI3Characters extends HI3Characters {
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, subName.hashCode);
+    _$hash = $jc(_$hash, iconUrl.hashCode);
+    _$hash = $jc(_$hash, thumbnailUrl.hashCode);
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, createdAt.hashCode);
     _$hash = $jc(_$hash, updatedAt.hashCode);
@@ -92,6 +102,8 @@ class _$HI3Characters extends HI3Characters {
           ..add('id', id)
           ..add('name', name)
           ..add('subName', subName)
+          ..add('iconUrl', iconUrl)
+          ..add('thumbnailUrl', thumbnailUrl)
           ..add('description', description)
           ..add('createdAt', createdAt)
           ..add('updatedAt', updatedAt)
@@ -117,6 +129,14 @@ class HI3CharactersBuilder
   String? _subName;
   String? get subName => _$this._subName;
   set subName(String? subName) => _$this._subName = subName;
+
+  String? _iconUrl;
+  String? get iconUrl => _$this._iconUrl;
+  set iconUrl(String? iconUrl) => _$this._iconUrl = iconUrl;
+
+  String? _thumbnailUrl;
+  String? get thumbnailUrl => _$this._thumbnailUrl;
+  set thumbnailUrl(String? thumbnailUrl) => _$this._thumbnailUrl = thumbnailUrl;
 
   String? _description;
   String? get description => _$this._description;
@@ -157,6 +177,8 @@ class HI3CharactersBuilder
       _id = $v.id;
       _name = $v.name;
       _subName = $v.subName;
+      _iconUrl = $v.iconUrl;
+      _thumbnailUrl = $v.thumbnailUrl;
       _description = $v.description;
       _createdAt = $v.createdAt;
       _updatedAt = $v.updatedAt;
@@ -192,6 +214,8 @@ class HI3CharactersBuilder
               name: BuiltValueNullFieldError.checkNotNull(
                   name, r'HI3Characters', 'name'),
               subName: subName,
+              iconUrl: iconUrl,
+              thumbnailUrl: thumbnailUrl,
               description: description,
               createdAt: BuiltValueNullFieldError.checkNotNull(
                   createdAt, r'HI3Characters', 'createdAt'),

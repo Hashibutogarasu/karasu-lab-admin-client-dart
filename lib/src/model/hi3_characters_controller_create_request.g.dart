@@ -15,6 +15,10 @@ class _$Hi3CharactersControllerCreateRequest
   @override
   final String? subName;
   @override
+  final String? iconUrl;
+  @override
+  final String? thumbnailUrl;
+  @override
   final BuiltList<Hi3CharactersControllerCreateRequestSkillsInner?>? skills;
   @override
   final BuiltList<Hi3CharactersControllerCreateRequestWeaponsInner>? weapons;
@@ -32,6 +36,8 @@ class _$Hi3CharactersControllerCreateRequest
       {required this.name,
       this.description,
       this.subName,
+      this.iconUrl,
+      this.thumbnailUrl,
       this.skills,
       this.weapons,
       this.stigmatas})
@@ -56,6 +62,8 @@ class _$Hi3CharactersControllerCreateRequest
         name == other.name &&
         description == other.description &&
         subName == other.subName &&
+        iconUrl == other.iconUrl &&
+        thumbnailUrl == other.thumbnailUrl &&
         skills == other.skills &&
         weapons == other.weapons &&
         stigmatas == other.stigmatas;
@@ -67,6 +75,8 @@ class _$Hi3CharactersControllerCreateRequest
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, subName.hashCode);
+    _$hash = $jc(_$hash, iconUrl.hashCode);
+    _$hash = $jc(_$hash, thumbnailUrl.hashCode);
     _$hash = $jc(_$hash, skills.hashCode);
     _$hash = $jc(_$hash, weapons.hashCode);
     _$hash = $jc(_$hash, stigmatas.hashCode);
@@ -80,6 +90,8 @@ class _$Hi3CharactersControllerCreateRequest
           ..add('name', name)
           ..add('description', description)
           ..add('subName', subName)
+          ..add('iconUrl', iconUrl)
+          ..add('thumbnailUrl', thumbnailUrl)
           ..add('skills', skills)
           ..add('weapons', weapons)
           ..add('stigmatas', stigmatas))
@@ -104,6 +116,14 @@ class Hi3CharactersControllerCreateRequestBuilder
   String? _subName;
   String? get subName => _$this._subName;
   set subName(String? subName) => _$this._subName = subName;
+
+  String? _iconUrl;
+  String? get iconUrl => _$this._iconUrl;
+  set iconUrl(String? iconUrl) => _$this._iconUrl = iconUrl;
+
+  String? _thumbnailUrl;
+  String? get thumbnailUrl => _$this._thumbnailUrl;
+  set thumbnailUrl(String? thumbnailUrl) => _$this._thumbnailUrl = thumbnailUrl;
 
   ListBuilder<Hi3CharactersControllerCreateRequestSkillsInner?>? _skills;
   ListBuilder<Hi3CharactersControllerCreateRequestSkillsInner?> get skills =>
@@ -142,6 +162,8 @@ class Hi3CharactersControllerCreateRequestBuilder
       _name = $v.name;
       _description = $v.description;
       _subName = $v.subName;
+      _iconUrl = $v.iconUrl;
+      _thumbnailUrl = $v.thumbnailUrl;
       _skills = $v.skills?.toBuilder();
       _weapons = $v.weapons?.toBuilder();
       _stigmatas = $v.stigmatas?.toBuilder();
@@ -174,6 +196,8 @@ class Hi3CharactersControllerCreateRequestBuilder
                   name, r'Hi3CharactersControllerCreateRequest', 'name'),
               description: description,
               subName: subName,
+              iconUrl: iconUrl,
+              thumbnailUrl: thumbnailUrl,
               skills: _skills?.build(),
               weapons: _weapons?.build(),
               stigmatas: _stigmatas?.build());
