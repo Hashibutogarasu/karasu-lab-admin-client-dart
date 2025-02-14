@@ -7,6 +7,16 @@ part of 'serializers.dart';
 // **************************************************************************
 
 Serializers _$serializers = (new Serializers().toBuilder()
+      ..add(AdminAuthControllerChangePasswordRequest.serializer)
+      ..add(AdminAuthControllerDisableMfaRequest.serializer)
+      ..add(AdminAuthControllerEnableMfaRequest.serializer)
+      ..add(AdminAuthControllerEnableMfaRequestAnswerChallengeEnum.serializer)
+      ..add(AdminAuthControllerForgotPasswordRequest.serializer)
+      ..add(AdminAuthControllerRefreshTokenRequest.serializer)
+      ..add(AdminAuthControllerSetUpMfaRequest.serializer)
+      ..add(AdminAuthControllerSigninConfirmRequest.serializer)
+      ..add(AdminAuthControllerSigninRequest.serializer)
+      ..add(AdminAuthControllerSignupRequest.serializer)
       ..add(ArtifactSets.serializer)
       ..add(ArtifactSetsControllerCreateRequest.serializer)
       ..add(ArtifactSetsControllerUpdateRequest.serializer)

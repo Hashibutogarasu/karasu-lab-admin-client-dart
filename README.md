@@ -47,14 +47,14 @@ Please follow the [installation procedure](#installation--usage) and then run th
 import 'package:karasu_lab_admin_client/karasu_lab_admin_client.dart';
 
 
-final api = KarasuLabAdminClient().getArtifactSetsApi();
-final ArtifactSetsControllerCreateRequest artifactSetsControllerCreateRequest = ; // ArtifactSetsControllerCreateRequest | 
+final api = KarasuLabAdminClient().getAdminAuthApi();
+final AdminAuthControllerChangePasswordRequest adminAuthControllerChangePasswordRequest = ; // AdminAuthControllerChangePasswordRequest | 
 
 try {
-    final response = await api.artifactSetsControllerCreate(artifactSetsControllerCreateRequest);
+    final response = await api.adminAuthControllerChangePassword(adminAuthControllerChangePasswordRequest);
     print(response);
 } catch on DioException (e) {
-    print("Exception when calling ArtifactSetsApi->artifactSetsControllerCreate: $e\n");
+    print("Exception when calling AdminAuthApi->adminAuthControllerChangePassword: $e\n");
 }
 
 ```
@@ -65,6 +65,18 @@ All URIs are relative to *https://api.karasu256.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+[*AdminAuthApi*](doc/AdminAuthApi.md) | [**adminAuthControllerChangePassword**](doc/AdminAuthApi.md#adminauthcontrollerchangepassword) | **POST** /auth/admin/change-password | 
+[*AdminAuthApi*](doc/AdminAuthApi.md) | [**adminAuthControllerDisableMfa**](doc/AdminAuthApi.md#adminauthcontrollerdisablemfa) | **POST** /auth/admin/mfa/disable | 
+[*AdminAuthApi*](doc/AdminAuthApi.md) | [**adminAuthControllerEnableMfa**](doc/AdminAuthApi.md#adminauthcontrollerenablemfa) | **POST** /auth/admin/mfa/enable | 
+[*AdminAuthApi*](doc/AdminAuthApi.md) | [**adminAuthControllerForgotPassword**](doc/AdminAuthApi.md#adminauthcontrollerforgotpassword) | **POST** /auth/admin/forgot-password | 
+[*AdminAuthApi*](doc/AdminAuthApi.md) | [**adminAuthControllerForgotPasswordConfirm**](doc/AdminAuthApi.md#adminauthcontrollerforgotpasswordconfirm) | **POST** /auth/admin/forgot-password/confirm | 
+[*AdminAuthApi*](doc/AdminAuthApi.md) | [**adminAuthControllerGetRefreshToken**](doc/AdminAuthApi.md#adminauthcontrollergetrefreshtoken) | **POST** /auth/admin/get-refresh-token | 
+[*AdminAuthApi*](doc/AdminAuthApi.md) | [**adminAuthControllerMe**](doc/AdminAuthApi.md#adminauthcontrollerme) | **GET** /auth/admin | 
+[*AdminAuthApi*](doc/AdminAuthApi.md) | [**adminAuthControllerRefreshToken**](doc/AdminAuthApi.md#adminauthcontrollerrefreshtoken) | **POST** /auth/admin/refresh-token | 
+[*AdminAuthApi*](doc/AdminAuthApi.md) | [**adminAuthControllerSetUpMfa**](doc/AdminAuthApi.md#adminauthcontrollersetupmfa) | **POST** /auth/admin/mfa/set-up | 
+[*AdminAuthApi*](doc/AdminAuthApi.md) | [**adminAuthControllerSignin**](doc/AdminAuthApi.md#adminauthcontrollersignin) | **POST** /auth/admin/sign-in | 
+[*AdminAuthApi*](doc/AdminAuthApi.md) | [**adminAuthControllerSigninConfirm**](doc/AdminAuthApi.md#adminauthcontrollersigninconfirm) | **POST** /auth/admin/sign-up/confirm | 
+[*AdminAuthApi*](doc/AdminAuthApi.md) | [**adminAuthControllerSignup**](doc/AdminAuthApi.md#adminauthcontrollersignup) | **POST** /auth/admin/sign-up | 
 [*ArtifactSetsApi*](doc/ArtifactSetsApi.md) | [**artifactSetsControllerCreate**](doc/ArtifactSetsApi.md#artifactsetscontrollercreate) | **POST** /wiki/genshin/admin/artifact-sets | 
 [*ArtifactSetsApi*](doc/ArtifactSetsApi.md) | [**artifactSetsControllerDelete**](doc/ArtifactSetsApi.md#artifactsetscontrollerdelete) | **DELETE** /wiki/genshin/admin/artifact-sets/{id} | 
 [*ArtifactSetsApi*](doc/ArtifactSetsApi.md) | [**artifactSetsControllerUpdate**](doc/ArtifactSetsApi.md#artifactsetscontrollerupdate) | **PUT** /wiki/genshin/admin/artifact-sets | 
@@ -96,6 +108,15 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [AdminAuthControllerChangePasswordRequest](doc/AdminAuthControllerChangePasswordRequest.md)
+ - [AdminAuthControllerDisableMfaRequest](doc/AdminAuthControllerDisableMfaRequest.md)
+ - [AdminAuthControllerEnableMfaRequest](doc/AdminAuthControllerEnableMfaRequest.md)
+ - [AdminAuthControllerForgotPasswordRequest](doc/AdminAuthControllerForgotPasswordRequest.md)
+ - [AdminAuthControllerRefreshTokenRequest](doc/AdminAuthControllerRefreshTokenRequest.md)
+ - [AdminAuthControllerSetUpMfaRequest](doc/AdminAuthControllerSetUpMfaRequest.md)
+ - [AdminAuthControllerSigninConfirmRequest](doc/AdminAuthControllerSigninConfirmRequest.md)
+ - [AdminAuthControllerSigninRequest](doc/AdminAuthControllerSigninRequest.md)
+ - [AdminAuthControllerSignupRequest](doc/AdminAuthControllerSignupRequest.md)
  - [ArtifactSets](doc/ArtifactSets.md)
  - [ArtifactSetsControllerCreateRequest](doc/ArtifactSetsControllerCreateRequest.md)
  - [ArtifactSetsControllerUpdateRequest](doc/ArtifactSetsControllerUpdateRequest.md)
