@@ -13,11 +13,8 @@ import 'package:karasu_lab_admin_client/src/api/admin_auth_api.dart';
 import 'package:karasu_lab_admin_client/src/api/artifact_sets_api.dart';
 import 'package:karasu_lab_admin_client/src/api/artifacts_api.dart';
 import 'package:karasu_lab_admin_client/src/api/characters_api.dart';
-import 'package:karasu_lab_admin_client/src/api/countries_api.dart';
 import 'package:karasu_lab_admin_client/src/api/galleries_api.dart';
 import 'package:karasu_lab_admin_client/src/api/hi3_characters_api.dart';
-import 'package:karasu_lab_admin_client/src/api/versions_api.dart';
-import 'package:karasu_lab_admin_client/src/api/weapons_api.dart';
 
 class KarasuLabAdminClient {
   static const String basePath = r'https://api.karasu256.com';
@@ -97,12 +94,6 @@ class KarasuLabAdminClient {
     return CharactersApi(dio, serializers);
   }
 
-  /// Get CountriesApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  CountriesApi getCountriesApi() {
-    return CountriesApi(dio, serializers);
-  }
-
   /// Get GalleriesApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   GalleriesApi getGalleriesApi() {
@@ -113,17 +104,5 @@ class KarasuLabAdminClient {
   /// by doing that all interceptors will not be executed
   Hi3CharactersApi getHi3CharactersApi() {
     return Hi3CharactersApi(dio, serializers);
-  }
-
-  /// Get VersionsApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  VersionsApi getVersionsApi() {
-    return VersionsApi(dio, serializers);
-  }
-
-  /// Get WeaponsApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  WeaponsApi getWeaponsApi() {
-    return WeaponsApi(dio, serializers);
   }
 }

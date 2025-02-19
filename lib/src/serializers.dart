@@ -39,8 +39,6 @@ import 'package:karasu_lab_admin_client/src/model/characters_controller_import_r
 import 'package:karasu_lab_admin_client/src/model/characters_controller_import_request_filter_values_character_property_value_types_inner.dart';
 import 'package:karasu_lab_admin_client/src/model/characters_controller_import_request_modules_inner.dart';
 import 'package:karasu_lab_admin_client/src/model/characters_controller_import_request_modules_inner_components_inner.dart';
-import 'package:karasu_lab_admin_client/src/model/countries_controller_create_request.dart';
-import 'package:karasu_lab_admin_client/src/model/countries_controller_update_request.dart';
 import 'package:karasu_lab_admin_client/src/model/country.dart';
 import 'package:karasu_lab_admin_client/src/model/create_character_request.dart';
 import 'package:karasu_lab_admin_client/src/model/gi_character.dart';
@@ -58,12 +56,8 @@ import 'package:karasu_lab_admin_client/src/model/hi3_characters_controller_upda
 import 'package:karasu_lab_admin_client/src/model/hi3_characters_controller_update_request_stigmatas_inner.dart';
 import 'package:karasu_lab_admin_client/src/model/hi3_characters_controller_update_request_weapons_inner.dart';
 import 'package:karasu_lab_admin_client/src/model/update_character_request.dart';
-import 'package:karasu_lab_admin_client/src/model/versions_controller_create_request.dart';
-import 'package:karasu_lab_admin_client/src/model/versions_controller_update_request.dart';
 import 'package:karasu_lab_admin_client/src/model/versions_entity.dart';
 import 'package:karasu_lab_admin_client/src/model/weapon.dart';
-import 'package:karasu_lab_admin_client/src/model/weapons_controller_create_request.dart';
-import 'package:karasu_lab_admin_client/src/model/weapons_controller_update_request.dart';
 
 part 'serializers.g.dart';
 
@@ -93,8 +87,6 @@ part 'serializers.g.dart';
   CharactersControllerImportRequestFilterValuesCharacterPropertyValueTypesInner,
   CharactersControllerImportRequestModulesInner,
   CharactersControllerImportRequestModulesInnerComponentsInner,
-  CountriesControllerCreateRequest,
-  CountriesControllerUpdateRequest,
   Country,
   CreateCharacterRequest,
   GICharacter,
@@ -112,12 +104,8 @@ part 'serializers.g.dart';
   Hi3CharactersControllerUpdateRequestStigmatasInner,
   Hi3CharactersControllerUpdateRequestWeaponsInner,
   UpdateCharacterRequest,
-  VersionsControllerCreateRequest,
-  VersionsControllerUpdateRequest,
   VersionsEntity,
   Weapon,
-  WeaponsControllerCreateRequest,
-  WeaponsControllerUpdateRequest,
 ])
 Serializers serializers = (_$serializers.toBuilder()
       ..add(const OneOfSerializer())
