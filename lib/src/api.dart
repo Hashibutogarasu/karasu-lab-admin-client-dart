@@ -10,8 +10,6 @@ import 'package:karasu_lab_admin_client/src/auth/basic_auth.dart';
 import 'package:karasu_lab_admin_client/src/auth/bearer_auth.dart';
 import 'package:karasu_lab_admin_client/src/auth/oauth.dart';
 import 'package:karasu_lab_admin_client/src/api/admin_auth_api.dart';
-import 'package:karasu_lab_admin_client/src/api/artifact_sets_api.dart';
-import 'package:karasu_lab_admin_client/src/api/artifacts_api.dart';
 import 'package:karasu_lab_admin_client/src/api/characters_api.dart';
 import 'package:karasu_lab_admin_client/src/api/galleries_api.dart';
 import 'package:karasu_lab_admin_client/src/api/hi3_characters_api.dart';
@@ -74,18 +72,6 @@ class KarasuLabAdminClient {
   /// by doing that all interceptors will not be executed
   AdminAuthApi getAdminAuthApi() {
     return AdminAuthApi(dio, serializers);
-  }
-
-  /// Get ArtifactSetsApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  ArtifactSetsApi getArtifactSetsApi() {
-    return ArtifactSetsApi(dio, serializers);
-  }
-
-  /// Get ArtifactsApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  ArtifactsApi getArtifactsApi() {
-    return ArtifactsApi(dio, serializers);
   }
 
   /// Get CharactersApi instance, base route and serializer can be overridden by a given but be careful,

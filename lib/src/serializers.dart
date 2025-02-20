@@ -24,11 +24,7 @@ import 'package:karasu_lab_admin_client/src/model/admin_auth_controller_signin_c
 import 'package:karasu_lab_admin_client/src/model/admin_auth_controller_signin_request.dart';
 import 'package:karasu_lab_admin_client/src/model/admin_auth_controller_signup_request.dart';
 import 'package:karasu_lab_admin_client/src/model/artifact_sets.dart';
-import 'package:karasu_lab_admin_client/src/model/artifact_sets_controller_create_request.dart';
-import 'package:karasu_lab_admin_client/src/model/artifact_sets_controller_update_request.dart';
 import 'package:karasu_lab_admin_client/src/model/artifacts.dart';
-import 'package:karasu_lab_admin_client/src/model/artifacts_controller_create_request.dart';
-import 'package:karasu_lab_admin_client/src/model/artifacts_controller_update_request.dart';
 import 'package:karasu_lab_admin_client/src/model/characters_controller_import_from_hoyo_lab_query_parameter.dart';
 import 'package:karasu_lab_admin_client/src/model/characters_controller_import_request.dart';
 import 'package:karasu_lab_admin_client/src/model/characters_controller_import_request_ext.dart';
@@ -43,6 +39,7 @@ import 'package:karasu_lab_admin_client/src/model/country.dart';
 import 'package:karasu_lab_admin_client/src/model/create_character_request.dart';
 import 'package:karasu_lab_admin_client/src/model/gi_character.dart';
 import 'package:karasu_lab_admin_client/src/model/galleries_controller_create_request.dart';
+import 'package:karasu_lab_admin_client/src/model/galleries_controller_update_request.dart';
 import 'package:karasu_lab_admin_client/src/model/gallery.dart';
 import 'package:karasu_lab_admin_client/src/model/hi3_characters.dart';
 import 'package:karasu_lab_admin_client/src/model/hi3_skills_entity.dart';
@@ -72,11 +69,7 @@ part 'serializers.g.dart';
   AdminAuthControllerSigninRequest,
   AdminAuthControllerSignupRequest,
   ArtifactSets,
-  ArtifactSetsControllerCreateRequest,
-  ArtifactSetsControllerUpdateRequest,
   Artifacts,
-  ArtifactsControllerCreateRequest,
-  ArtifactsControllerUpdateRequest,
   CharactersControllerImportFromHoyoLabQueryParameter,
   CharactersControllerImportRequest,
   CharactersControllerImportRequestExt,
@@ -91,6 +84,7 @@ part 'serializers.g.dart';
   CreateCharacterRequest,
   GICharacter,
   GalleriesControllerCreateRequest,
+  GalleriesControllerUpdateRequest,
   Gallery,
   HI3Characters,
   HI3SkillsEntity,

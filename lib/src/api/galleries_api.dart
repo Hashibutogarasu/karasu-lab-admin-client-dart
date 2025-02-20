@@ -9,8 +9,8 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:karasu_lab_admin_client/src/api_util.dart';
-import 'package:karasu_lab_admin_client/src/model/artifact_sets_controller_update_request.dart';
 import 'package:karasu_lab_admin_client/src/model/galleries_controller_create_request.dart';
+import 'package:karasu_lab_admin_client/src/model/galleries_controller_update_request.dart';
 import 'package:karasu_lab_admin_client/src/model/gallery.dart';
 
 class GalleriesApi {
@@ -179,7 +179,7 @@ class GalleriesApi {
   /// 
   ///
   /// Parameters:
-  /// * [artifactSetsControllerUpdateRequest] 
+  /// * [galleriesControllerUpdateRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -190,7 +190,7 @@ class GalleriesApi {
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
   Future<Response<void>> galleriesControllerUpdate({ 
-    required ArtifactSetsControllerUpdateRequest artifactSetsControllerUpdateRequest,
+    required GalleriesControllerUpdateRequest galleriesControllerUpdateRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -221,8 +221,8 @@ class GalleriesApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(ArtifactSetsControllerUpdateRequest);
-      _bodyData = _serializers.serialize(artifactSetsControllerUpdateRequest, specifiedType: _type);
+      const _type = FullType(GalleriesControllerUpdateRequest);
+      _bodyData = _serializers.serialize(galleriesControllerUpdateRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioException(

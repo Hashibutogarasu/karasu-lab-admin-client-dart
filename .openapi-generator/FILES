@@ -12,13 +12,7 @@ doc/AdminAuthControllerSigninConfirmRequest.md
 doc/AdminAuthControllerSigninRequest.md
 doc/AdminAuthControllerSignupRequest.md
 doc/ArtifactSets.md
-doc/ArtifactSetsApi.md
-doc/ArtifactSetsControllerCreateRequest.md
-doc/ArtifactSetsControllerUpdateRequest.md
 doc/Artifacts.md
-doc/ArtifactsApi.md
-doc/ArtifactsControllerCreateRequest.md
-doc/ArtifactsControllerUpdateRequest.md
 doc/CharactersApi.md
 doc/CharactersControllerImportFromHoyoLabQueryParameter.md
 doc/CharactersControllerImportRequest.md
@@ -35,6 +29,7 @@ doc/CreateCharacterRequest.md
 doc/GICharacter.md
 doc/GalleriesApi.md
 doc/GalleriesControllerCreateRequest.md
+doc/GalleriesControllerUpdateRequest.md
 doc/Gallery.md
 doc/HI3Characters.md
 doc/HI3SkillsEntity.md
@@ -54,8 +49,6 @@ doc/Weapon.md
 lib/karasu_lab_admin_client.dart
 lib/src/api.dart
 lib/src/api/admin_auth_api.dart
-lib/src/api/artifact_sets_api.dart
-lib/src/api/artifacts_api.dart
 lib/src/api/characters_api.dart
 lib/src/api/galleries_api.dart
 lib/src/api/hi3_characters_api.dart
@@ -76,11 +69,7 @@ lib/src/model/admin_auth_controller_signin_confirm_request.dart
 lib/src/model/admin_auth_controller_signin_request.dart
 lib/src/model/admin_auth_controller_signup_request.dart
 lib/src/model/artifact_sets.dart
-lib/src/model/artifact_sets_controller_create_request.dart
-lib/src/model/artifact_sets_controller_update_request.dart
 lib/src/model/artifacts.dart
-lib/src/model/artifacts_controller_create_request.dart
-lib/src/model/artifacts_controller_update_request.dart
 lib/src/model/characters_controller_import_from_hoyo_lab_query_parameter.dart
 lib/src/model/characters_controller_import_request.dart
 lib/src/model/characters_controller_import_request_ext.dart
@@ -95,6 +84,7 @@ lib/src/model/country.dart
 lib/src/model/create_character_request.dart
 lib/src/model/date.dart
 lib/src/model/galleries_controller_create_request.dart
+lib/src/model/galleries_controller_update_request.dart
 lib/src/model/gallery.dart
 lib/src/model/gi_character.dart
 lib/src/model/hi3_characters.dart
@@ -113,3 +103,4 @@ lib/src/model/versions_entity.dart
 lib/src/model/weapon.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/galleries_controller_update_request_test.dart

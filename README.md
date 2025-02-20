@@ -77,12 +77,6 @@ Class | Method | HTTP request | Description
 [*AdminAuthApi*](doc/AdminAuthApi.md) | [**adminAuthControllerSignin**](doc/AdminAuthApi.md#adminauthcontrollersignin) | **POST** /auth/admin/sign-in | 
 [*AdminAuthApi*](doc/AdminAuthApi.md) | [**adminAuthControllerSigninConfirm**](doc/AdminAuthApi.md#adminauthcontrollersigninconfirm) | **POST** /auth/admin/sign-up/confirm | 
 [*AdminAuthApi*](doc/AdminAuthApi.md) | [**adminAuthControllerSignup**](doc/AdminAuthApi.md#adminauthcontrollersignup) | **POST** /auth/admin/sign-up | 
-[*ArtifactSetsApi*](doc/ArtifactSetsApi.md) | [**artifactSetsControllerCreate**](doc/ArtifactSetsApi.md#artifactsetscontrollercreate) | **POST** /wiki/genshin/admin/artifact-sets | 
-[*ArtifactSetsApi*](doc/ArtifactSetsApi.md) | [**artifactSetsControllerDelete**](doc/ArtifactSetsApi.md#artifactsetscontrollerdelete) | **DELETE** /wiki/genshin/admin/artifact-sets/{id} | 
-[*ArtifactSetsApi*](doc/ArtifactSetsApi.md) | [**artifactSetsControllerUpdate**](doc/ArtifactSetsApi.md#artifactsetscontrollerupdate) | **PUT** /wiki/genshin/admin/artifact-sets | 
-[*ArtifactsApi*](doc/ArtifactsApi.md) | [**artifactsControllerCreate**](doc/ArtifactsApi.md#artifactscontrollercreate) | **POST** /wiki/genshin/admin/artifacts | 
-[*ArtifactsApi*](doc/ArtifactsApi.md) | [**artifactsControllerDelete**](doc/ArtifactsApi.md#artifactscontrollerdelete) | **DELETE** /wiki/genshin/admin/artifacts/{id} | 
-[*ArtifactsApi*](doc/ArtifactsApi.md) | [**artifactsControllerUpdate**](doc/ArtifactsApi.md#artifactscontrollerupdate) | **PUT** /wiki/genshin/admin/artifacts | 
 [*CharactersApi*](doc/CharactersApi.md) | [**charactersControllerImport**](doc/CharactersApi.md#characterscontrollerimport) | **POST** /wiki/genshin/admin/characters/import | 
 [*CharactersApi*](doc/CharactersApi.md) | [**charactersControllerImportFromHoyoLab**](doc/CharactersApi.md#characterscontrollerimportfromhoyolab) | **POST** /wiki/genshin/admin/characters/importFromHoyoLab | 
 [*CharactersApi*](doc/CharactersApi.md) | [**createCharacter**](doc/CharactersApi.md#createcharacter) | **POST** /wiki/genshin/admin/characters | Create character
@@ -109,11 +103,7 @@ Class | Method | HTTP request | Description
  - [AdminAuthControllerSigninRequest](doc/AdminAuthControllerSigninRequest.md)
  - [AdminAuthControllerSignupRequest](doc/AdminAuthControllerSignupRequest.md)
  - [ArtifactSets](doc/ArtifactSets.md)
- - [ArtifactSetsControllerCreateRequest](doc/ArtifactSetsControllerCreateRequest.md)
- - [ArtifactSetsControllerUpdateRequest](doc/ArtifactSetsControllerUpdateRequest.md)
  - [Artifacts](doc/Artifacts.md)
- - [ArtifactsControllerCreateRequest](doc/ArtifactsControllerCreateRequest.md)
- - [ArtifactsControllerUpdateRequest](doc/ArtifactsControllerUpdateRequest.md)
  - [CharactersControllerImportFromHoyoLabQueryParameter](doc/CharactersControllerImportFromHoyoLabQueryParameter.md)
  - [CharactersControllerImportRequest](doc/CharactersControllerImportRequest.md)
  - [CharactersControllerImportRequestExt](doc/CharactersControllerImportRequestExt.md)
@@ -128,6 +118,7 @@ Class | Method | HTTP request | Description
  - [CreateCharacterRequest](doc/CreateCharacterRequest.md)
  - [GICharacter](doc/GICharacter.md)
  - [GalleriesControllerCreateRequest](doc/GalleriesControllerCreateRequest.md)
+ - [GalleriesControllerUpdateRequest](doc/GalleriesControllerUpdateRequest.md)
  - [Gallery](doc/Gallery.md)
  - [HI3Characters](doc/HI3Characters.md)
  - [HI3SkillsEntity](doc/HI3SkillsEntity.md)
