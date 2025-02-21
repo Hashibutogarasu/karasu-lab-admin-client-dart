@@ -36,6 +36,11 @@ Serializers _$serializers = (new Serializers().toBuilder()
           .serializer)
       ..add(Country.serializer)
       ..add(CreateCharacterRequest.serializer)
+      ..add(CreateCharacterRequestArtifactSetInner.serializer)
+      ..add(CreateCharacterRequestGalleriesInner.serializer)
+      ..add(CreateCharacterRequestRegion.serializer)
+      ..add(CreateCharacterRequestVersion.serializer)
+      ..add(CreateCharacterRequestWeapon.serializer)
       ..add(GICharacter.serializer)
       ..add(GalleriesControllerCreateRequest.serializer)
       ..add(GalleriesControllerUpdateRequest.serializer)
@@ -52,6 +57,12 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(Hi3CharactersControllerUpdateRequestStigmatasInner.serializer)
       ..add(Hi3CharactersControllerUpdateRequestWeaponsInner.serializer)
       ..add(UpdateCharacterRequest.serializer)
+      ..add(UpdateCharacterRequestArtifactSetInner.serializer)
+      ..add(UpdateCharacterRequestGalleriesInner.serializer)
+      ..add(UpdateCharacterRequestRegion.serializer)
+      ..add(UpdateCharacterRequestVersion.serializer)
+      ..add(UpdateCharacterRequestWeapon.serializer)
+      ..add(UpdateCharacterRequestWeaponVersion.serializer)
       ..add(VersionsEntity.serializer)
       ..add(Weapon.serializer)
       ..addBuilderFactory(
@@ -85,6 +96,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
           ]),
           () => new ListBuilder<
               CharactersControllerImportRequestModulesInnerComponentsInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(CreateCharacterRequestGalleriesInner)]),
+          () => new ListBuilder<CreateCharacterRequestGalleriesInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(CreateCharacterRequestArtifactSetInner)]),
+          () => new ListBuilder<CreateCharacterRequestArtifactSetInner>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(GICharacter)]),
           () => new ListBuilder<GICharacter>())
@@ -122,15 +141,18 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>())
-      ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(
                 CharactersControllerImportRequestFilterValuesCharacterPropertyValueTypesInner)
           ]),
           () => new ListBuilder<
               CharactersControllerImportRequestFilterValuesCharacterPropertyValueTypesInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType.nullable(
@@ -169,7 +191,17 @@ Serializers _$serializers = (new Serializers().toBuilder()
             const FullType(Hi3CharactersControllerUpdateRequestStigmatasInner)
           ]),
           () => new ListBuilder<
-              Hi3CharactersControllerUpdateRequestStigmatasInner>()))
+              Hi3CharactersControllerUpdateRequestStigmatasInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(UpdateCharacterRequestGalleriesInner)
+          ]),
+          () => new ListBuilder<UpdateCharacterRequestGalleriesInner?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(UpdateCharacterRequestArtifactSetInner)
+          ]),
+          () => new ListBuilder<UpdateCharacterRequestArtifactSetInner?>()))
     .build();
 
 // ignore_for_file: deprecated_member_use_from_same_package,type=lint

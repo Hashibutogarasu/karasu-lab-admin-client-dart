@@ -17,16 +17,6 @@ void main() {
       // TODO
     });
 
-    // DateTime createdAt
-    test('to test the property `createdAt`', () async {
-      // TODO
-    });
-
-    // DateTime updatedAt
-    test('to test the property `updatedAt`', () async {
-      // TODO
-    });
-
     // String description
     test('to test the property `description`', () async {
       // TODO
@@ -59,6 +49,16 @@ void main() {
 
     // VersionsEntity version
     test('to test the property `version`', () async {
+      // TODO
+    });
+
+    // DateTime createdAt
+    test('to test the property `createdAt`', () async {
+      // TODO
+    });
+
+    // DateTime updatedAt
+    test('to test the property `updatedAt`', () async {
       // TODO
     });
 

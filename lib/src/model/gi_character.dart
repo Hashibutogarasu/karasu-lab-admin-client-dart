@@ -53,7 +53,7 @@ abstract class GICharacter implements Built<GICharacter, GICharacterBuilder> {
   String? get element;
 
   @BuiltValueField(wireName: r'rarity')
-  num? get rarity;
+  num get rarity;
 
   @BuiltValueField(wireName: r'header_img_url')
   String? get headerImgUrl;
@@ -143,13 +143,11 @@ class _$GICharacterSerializer implements PrimitiveSerializer<GICharacter> {
         specifiedType: const FullType.nullable(String),
       );
     }
-    if (object.rarity != null) {
-      yield r'rarity';
-      yield serializers.serialize(
-        object.rarity,
-        specifiedType: const FullType.nullable(num),
-      );
-    }
+    yield r'rarity';
+    yield serializers.serialize(
+      object.rarity,
+      specifiedType: const FullType(num),
+    );
     yield r'header_img_url';
     yield object.headerImgUrl == null ? null : serializers.serialize(
       object.headerImgUrl,
@@ -289,9 +287,8 @@ class _$GICharacterSerializer implements PrimitiveSerializer<GICharacter> {
         case r'rarity':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(num),
-          ) as num?;
-          if (valueDes == null) continue;
+            specifiedType: const FullType(num),
+          ) as num;
           result.rarity = valueDes;
           break;
         case r'header_img_url':

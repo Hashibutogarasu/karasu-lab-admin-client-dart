@@ -61,35 +61,35 @@ class _$CharactersControllerImportRequestFilterValuesSerializer implements Primi
       yield r'character_property';
       yield serializers.serialize(
         object.characterProperty,
-        specifiedType: const FullType(CharactersControllerImportRequestFilterValuesCharacterProperty),
+        specifiedType: const FullType.nullable(CharactersControllerImportRequestFilterValuesCharacterProperty),
       );
     }
     if (object.characterWeapon != null) {
       yield r'character_weapon';
       yield serializers.serialize(
         object.characterWeapon,
-        specifiedType: const FullType(CharactersControllerImportRequestFilterValuesCharacterProperty),
+        specifiedType: const FullType.nullable(CharactersControllerImportRequestFilterValuesCharacterProperty),
       );
     }
     if (object.characterRarity != null) {
       yield r'character_rarity';
       yield serializers.serialize(
         object.characterRarity,
-        specifiedType: const FullType(CharactersControllerImportRequestFilterValuesCharacterProperty),
+        specifiedType: const FullType.nullable(CharactersControllerImportRequestFilterValuesCharacterProperty),
       );
     }
     if (object.characterVision != null) {
       yield r'character_vision';
       yield serializers.serialize(
         object.characterVision,
-        specifiedType: const FullType(CharactersControllerImportRequestFilterValuesCharacterProperty),
+        specifiedType: const FullType.nullable(CharactersControllerImportRequestFilterValuesCharacterProperty),
       );
     }
     if (object.characterRegion != null) {
       yield r'character_region';
       yield serializers.serialize(
         object.characterRegion,
-        specifiedType: const FullType(CharactersControllerImportRequestFilterValuesCharacterProperty),
+        specifiedType: const FullType.nullable(CharactersControllerImportRequestFilterValuesCharacterProperty),
       );
     }
   }
@@ -118,36 +118,41 @@ class _$CharactersControllerImportRequestFilterValuesSerializer implements Primi
         case r'character_property':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(CharactersControllerImportRequestFilterValuesCharacterProperty),
-          ) as CharactersControllerImportRequestFilterValuesCharacterProperty;
+            specifiedType: const FullType.nullable(CharactersControllerImportRequestFilterValuesCharacterProperty),
+          ) as CharactersControllerImportRequestFilterValuesCharacterProperty?;
+          if (valueDes == null) continue;
           result.characterProperty.replace(valueDes);
           break;
         case r'character_weapon':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(CharactersControllerImportRequestFilterValuesCharacterProperty),
-          ) as CharactersControllerImportRequestFilterValuesCharacterProperty;
+            specifiedType: const FullType.nullable(CharactersControllerImportRequestFilterValuesCharacterProperty),
+          ) as CharactersControllerImportRequestFilterValuesCharacterProperty?;
+          if (valueDes == null) continue;
           result.characterWeapon.replace(valueDes);
           break;
         case r'character_rarity':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(CharactersControllerImportRequestFilterValuesCharacterProperty),
-          ) as CharactersControllerImportRequestFilterValuesCharacterProperty;
+            specifiedType: const FullType.nullable(CharactersControllerImportRequestFilterValuesCharacterProperty),
+          ) as CharactersControllerImportRequestFilterValuesCharacterProperty?;
+          if (valueDes == null) continue;
           result.characterRarity.replace(valueDes);
           break;
         case r'character_vision':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(CharactersControllerImportRequestFilterValuesCharacterProperty),
-          ) as CharactersControllerImportRequestFilterValuesCharacterProperty;
+            specifiedType: const FullType.nullable(CharactersControllerImportRequestFilterValuesCharacterProperty),
+          ) as CharactersControllerImportRequestFilterValuesCharacterProperty?;
+          if (valueDes == null) continue;
           result.characterVision.replace(valueDes);
           break;
         case r'character_region':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(CharactersControllerImportRequestFilterValuesCharacterProperty),
-          ) as CharactersControllerImportRequestFilterValuesCharacterProperty;
+            specifiedType: const FullType.nullable(CharactersControllerImportRequestFilterValuesCharacterProperty),
+          ) as CharactersControllerImportRequestFilterValuesCharacterProperty?;
+          if (valueDes == null) continue;
           result.characterRegion.replace(valueDes);
           break;
         default:

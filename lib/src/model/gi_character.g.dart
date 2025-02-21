@@ -18,7 +18,7 @@ class _$GICharacter extends GICharacter {
   @override
   final String? element;
   @override
-  final num? rarity;
+  final num rarity;
   @override
   final String? headerImgUrl;
   @override
@@ -53,7 +53,7 @@ class _$GICharacter extends GICharacter {
       this.description,
       required this.iconUrl,
       this.element,
-      this.rarity,
+      required this.rarity,
       this.headerImgUrl,
       this.weaponType,
       this.property,
@@ -70,6 +70,7 @@ class _$GICharacter extends GICharacter {
     BuiltValueNullFieldError.checkNotNull(id, r'GICharacter', 'id');
     BuiltValueNullFieldError.checkNotNull(name, r'GICharacter', 'name');
     BuiltValueNullFieldError.checkNotNull(iconUrl, r'GICharacter', 'iconUrl');
+    BuiltValueNullFieldError.checkNotNull(rarity, r'GICharacter', 'rarity');
     BuiltValueNullFieldError.checkNotNull(
         uninplemented, r'GICharacter', 'uninplemented');
     BuiltValueNullFieldError.checkNotNull(
@@ -298,7 +299,8 @@ class GICharacterBuilder implements Builder<GICharacter, GICharacterBuilder> {
               iconUrl: BuiltValueNullFieldError.checkNotNull(
                   iconUrl, r'GICharacter', 'iconUrl'),
               element: element,
-              rarity: rarity,
+              rarity: BuiltValueNullFieldError.checkNotNull(
+                  rarity, r'GICharacter', 'rarity'),
               headerImgUrl: headerImgUrl,
               weaponType: weaponType,
               property: property,

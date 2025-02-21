@@ -66,7 +66,7 @@ class _$CharactersControllerImportRequestModulesInnerComponentsInnerSerializer i
       yield r'data';
       yield serializers.serialize(
         object.data,
-        specifiedType: const FullType(String),
+        specifiedType: const FullType.nullable(String),
       );
     }
     yield r'style';
@@ -114,8 +114,9 @@ class _$CharactersControllerImportRequestModulesInnerComponentsInnerSerializer i
         case r'data':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
           result.data = valueDes;
           break;
         case r'style':

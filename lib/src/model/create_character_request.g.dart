@@ -12,27 +12,31 @@ class _$CreateCharacterRequest extends CreateCharacterRequest {
   @override
   final String? description;
   @override
-  final String? iconUrl;
+  final String iconUrl;
   @override
-  final String element;
-  @override
-  final String region;
-  @override
-  final String? weapon;
-  @override
-  final String? headerImgUrl;
-  @override
-  final BuiltList<String>? artifactSet;
-  @override
-  final String? weaponType;
+  final String? element;
   @override
   final int? rarity;
   @override
+  final String? headerImgUrl;
+  @override
+  final String? weaponType;
+  @override
   final String? property;
   @override
-  final String version;
-  @override
   final bool? unimplemented;
+  @override
+  final String? implementedDate;
+  @override
+  final CreateCharacterRequestRegion region;
+  @override
+  final CreateCharacterRequestWeapon weapon;
+  @override
+  final CreateCharacterRequestVersion version;
+  @override
+  final BuiltList<CreateCharacterRequestGalleriesInner>? galleries;
+  @override
+  final BuiltList<CreateCharacterRequestArtifactSetInner>? artifactSet;
 
   factory _$CreateCharacterRequest(
           [void Function(CreateCharacterRequestBuilder)? updates]) =>
@@ -41,24 +45,28 @@ class _$CreateCharacterRequest extends CreateCharacterRequest {
   _$CreateCharacterRequest._(
       {required this.name,
       this.description,
-      this.iconUrl,
-      required this.element,
-      required this.region,
-      this.weapon,
-      this.headerImgUrl,
-      this.artifactSet,
-      this.weaponType,
+      required this.iconUrl,
+      this.element,
       this.rarity,
+      this.headerImgUrl,
+      this.weaponType,
       this.property,
+      this.unimplemented,
+      this.implementedDate,
+      required this.region,
+      required this.weapon,
       required this.version,
-      this.unimplemented})
+      this.galleries,
+      this.artifactSet})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         name, r'CreateCharacterRequest', 'name');
     BuiltValueNullFieldError.checkNotNull(
-        element, r'CreateCharacterRequest', 'element');
+        iconUrl, r'CreateCharacterRequest', 'iconUrl');
     BuiltValueNullFieldError.checkNotNull(
         region, r'CreateCharacterRequest', 'region');
+    BuiltValueNullFieldError.checkNotNull(
+        weapon, r'CreateCharacterRequest', 'weapon');
     BuiltValueNullFieldError.checkNotNull(
         version, r'CreateCharacterRequest', 'version');
   }
@@ -80,15 +88,17 @@ class _$CreateCharacterRequest extends CreateCharacterRequest {
         description == other.description &&
         iconUrl == other.iconUrl &&
         element == other.element &&
+        rarity == other.rarity &&
+        headerImgUrl == other.headerImgUrl &&
+        weaponType == other.weaponType &&
+        property == other.property &&
+        unimplemented == other.unimplemented &&
+        implementedDate == other.implementedDate &&
         region == other.region &&
         weapon == other.weapon &&
-        headerImgUrl == other.headerImgUrl &&
-        artifactSet == other.artifactSet &&
-        weaponType == other.weaponType &&
-        rarity == other.rarity &&
-        property == other.property &&
         version == other.version &&
-        unimplemented == other.unimplemented;
+        galleries == other.galleries &&
+        artifactSet == other.artifactSet;
   }
 
   @override
@@ -98,15 +108,17 @@ class _$CreateCharacterRequest extends CreateCharacterRequest {
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, iconUrl.hashCode);
     _$hash = $jc(_$hash, element.hashCode);
+    _$hash = $jc(_$hash, rarity.hashCode);
+    _$hash = $jc(_$hash, headerImgUrl.hashCode);
+    _$hash = $jc(_$hash, weaponType.hashCode);
+    _$hash = $jc(_$hash, property.hashCode);
+    _$hash = $jc(_$hash, unimplemented.hashCode);
+    _$hash = $jc(_$hash, implementedDate.hashCode);
     _$hash = $jc(_$hash, region.hashCode);
     _$hash = $jc(_$hash, weapon.hashCode);
-    _$hash = $jc(_$hash, headerImgUrl.hashCode);
-    _$hash = $jc(_$hash, artifactSet.hashCode);
-    _$hash = $jc(_$hash, weaponType.hashCode);
-    _$hash = $jc(_$hash, rarity.hashCode);
-    _$hash = $jc(_$hash, property.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
-    _$hash = $jc(_$hash, unimplemented.hashCode);
+    _$hash = $jc(_$hash, galleries.hashCode);
+    _$hash = $jc(_$hash, artifactSet.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -118,15 +130,17 @@ class _$CreateCharacterRequest extends CreateCharacterRequest {
           ..add('description', description)
           ..add('iconUrl', iconUrl)
           ..add('element', element)
+          ..add('rarity', rarity)
+          ..add('headerImgUrl', headerImgUrl)
+          ..add('weaponType', weaponType)
+          ..add('property', property)
+          ..add('unimplemented', unimplemented)
+          ..add('implementedDate', implementedDate)
           ..add('region', region)
           ..add('weapon', weapon)
-          ..add('headerImgUrl', headerImgUrl)
-          ..add('artifactSet', artifactSet)
-          ..add('weaponType', weaponType)
-          ..add('rarity', rarity)
-          ..add('property', property)
           ..add('version', version)
-          ..add('unimplemented', unimplemented))
+          ..add('galleries', galleries)
+          ..add('artifactSet', artifactSet))
         .toString();
   }
 }
@@ -151,44 +165,64 @@ class CreateCharacterRequestBuilder
   String? get element => _$this._element;
   set element(String? element) => _$this._element = element;
 
-  String? _region;
-  String? get region => _$this._region;
-  set region(String? region) => _$this._region = region;
-
-  String? _weapon;
-  String? get weapon => _$this._weapon;
-  set weapon(String? weapon) => _$this._weapon = weapon;
+  int? _rarity;
+  int? get rarity => _$this._rarity;
+  set rarity(int? rarity) => _$this._rarity = rarity;
 
   String? _headerImgUrl;
   String? get headerImgUrl => _$this._headerImgUrl;
   set headerImgUrl(String? headerImgUrl) => _$this._headerImgUrl = headerImgUrl;
 
-  ListBuilder<String>? _artifactSet;
-  ListBuilder<String> get artifactSet =>
-      _$this._artifactSet ??= new ListBuilder<String>();
-  set artifactSet(ListBuilder<String>? artifactSet) =>
-      _$this._artifactSet = artifactSet;
-
   String? _weaponType;
   String? get weaponType => _$this._weaponType;
   set weaponType(String? weaponType) => _$this._weaponType = weaponType;
-
-  int? _rarity;
-  int? get rarity => _$this._rarity;
-  set rarity(int? rarity) => _$this._rarity = rarity;
 
   String? _property;
   String? get property => _$this._property;
   set property(String? property) => _$this._property = property;
 
-  String? _version;
-  String? get version => _$this._version;
-  set version(String? version) => _$this._version = version;
-
   bool? _unimplemented;
   bool? get unimplemented => _$this._unimplemented;
   set unimplemented(bool? unimplemented) =>
       _$this._unimplemented = unimplemented;
+
+  String? _implementedDate;
+  String? get implementedDate => _$this._implementedDate;
+  set implementedDate(String? implementedDate) =>
+      _$this._implementedDate = implementedDate;
+
+  CreateCharacterRequestRegionBuilder? _region;
+  CreateCharacterRequestRegionBuilder get region =>
+      _$this._region ??= new CreateCharacterRequestRegionBuilder();
+  set region(CreateCharacterRequestRegionBuilder? region) =>
+      _$this._region = region;
+
+  CreateCharacterRequestWeaponBuilder? _weapon;
+  CreateCharacterRequestWeaponBuilder get weapon =>
+      _$this._weapon ??= new CreateCharacterRequestWeaponBuilder();
+  set weapon(CreateCharacterRequestWeaponBuilder? weapon) =>
+      _$this._weapon = weapon;
+
+  CreateCharacterRequestVersionBuilder? _version;
+  CreateCharacterRequestVersionBuilder get version =>
+      _$this._version ??= new CreateCharacterRequestVersionBuilder();
+  set version(CreateCharacterRequestVersionBuilder? version) =>
+      _$this._version = version;
+
+  ListBuilder<CreateCharacterRequestGalleriesInner>? _galleries;
+  ListBuilder<CreateCharacterRequestGalleriesInner> get galleries =>
+      _$this._galleries ??=
+          new ListBuilder<CreateCharacterRequestGalleriesInner>();
+  set galleries(ListBuilder<CreateCharacterRequestGalleriesInner>? galleries) =>
+      _$this._galleries = galleries;
+
+  ListBuilder<CreateCharacterRequestArtifactSetInner>? _artifactSet;
+  ListBuilder<CreateCharacterRequestArtifactSetInner> get artifactSet =>
+      _$this._artifactSet ??=
+          new ListBuilder<CreateCharacterRequestArtifactSetInner>();
+  set artifactSet(
+          ListBuilder<CreateCharacterRequestArtifactSetInner>? artifactSet) =>
+      _$this._artifactSet = artifactSet;
 
   CreateCharacterRequestBuilder() {
     CreateCharacterRequest._defaults(this);
@@ -201,15 +235,17 @@ class CreateCharacterRequestBuilder
       _description = $v.description;
       _iconUrl = $v.iconUrl;
       _element = $v.element;
-      _region = $v.region;
-      _weapon = $v.weapon;
-      _headerImgUrl = $v.headerImgUrl;
-      _artifactSet = $v.artifactSet?.toBuilder();
-      _weaponType = $v.weaponType;
       _rarity = $v.rarity;
+      _headerImgUrl = $v.headerImgUrl;
+      _weaponType = $v.weaponType;
       _property = $v.property;
-      _version = $v.version;
       _unimplemented = $v.unimplemented;
+      _implementedDate = $v.implementedDate;
+      _region = $v.region.toBuilder();
+      _weapon = $v.weapon.toBuilder();
+      _version = $v.version.toBuilder();
+      _galleries = $v.galleries?.toBuilder();
+      _artifactSet = $v.artifactSet?.toBuilder();
       _$v = null;
     }
     return this;
@@ -237,23 +273,31 @@ class CreateCharacterRequestBuilder
               name: BuiltValueNullFieldError.checkNotNull(
                   name, r'CreateCharacterRequest', 'name'),
               description: description,
-              iconUrl: iconUrl,
-              element: BuiltValueNullFieldError.checkNotNull(
-                  element, r'CreateCharacterRequest', 'element'),
-              region: BuiltValueNullFieldError.checkNotNull(
-                  region, r'CreateCharacterRequest', 'region'),
-              weapon: weapon,
-              headerImgUrl: headerImgUrl,
-              artifactSet: _artifactSet?.build(),
-              weaponType: weaponType,
+              iconUrl: BuiltValueNullFieldError.checkNotNull(
+                  iconUrl, r'CreateCharacterRequest', 'iconUrl'),
+              element: element,
               rarity: rarity,
+              headerImgUrl: headerImgUrl,
+              weaponType: weaponType,
               property: property,
-              version: BuiltValueNullFieldError.checkNotNull(
-                  version, r'CreateCharacterRequest', 'version'),
-              unimplemented: unimplemented);
+              unimplemented: unimplemented,
+              implementedDate: implementedDate,
+              region: region.build(),
+              weapon: weapon.build(),
+              version: version.build(),
+              galleries: _galleries?.build(),
+              artifactSet: _artifactSet?.build());
     } catch (_) {
       late String _$failedField;
       try {
+        _$failedField = 'region';
+        region.build();
+        _$failedField = 'weapon';
+        weapon.build();
+        _$failedField = 'version';
+        version.build();
+        _$failedField = 'galleries';
+        _galleries?.build();
         _$failedField = 'artifactSet';
         _artifactSet?.build();
       } catch (e) {

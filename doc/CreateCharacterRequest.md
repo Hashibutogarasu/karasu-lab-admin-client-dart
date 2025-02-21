@@ -10,17 +10,19 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** |  | 
 **description** | **String** |  | [optional] 
-**iconUrl** | **String** |  | [optional] 
-**element** | **String** |  | 
-**region** | **String** |  | 
-**weapon** | **String** |  | [optional] 
-**headerImgUrl** | **String** |  | [optional] 
-**artifactSet** | **BuiltList&lt;String&gt;** |  | [optional] 
-**weaponType** | **String** |  | [optional] 
+**iconUrl** | **String** |  | 
+**element** | **String** |  | [optional] 
 **rarity** | **int** |  | [optional] 
+**headerImgUrl** | **String** |  | [optional] 
+**weaponType** | **String** |  | [optional] 
 **property** | **String** |  | [optional] 
-**version** | **String** |  | 
 **unimplemented** | **bool** |  | [optional] [default to false]
+**implementedDate** | **String** |  | [optional] 
+**region** | [**CreateCharacterRequestRegion**](CreateCharacterRequestRegion.md) |  | 
+**weapon** | [**CreateCharacterRequestWeapon**](CreateCharacterRequestWeapon.md) |  | 
+**version** | [**CreateCharacterRequestVersion**](CreateCharacterRequestVersion.md) |  | 
+**galleries** | [**BuiltList&lt;CreateCharacterRequestGalleriesInner&gt;**](CreateCharacterRequestGalleriesInner.md) |  | [optional] [default to ListBuilder()]
+**artifactSet** | [**BuiltList&lt;CreateCharacterRequestArtifactSetInner&gt;**](CreateCharacterRequestArtifactSetInner.md) |  | [optional] [default to ListBuilder()]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

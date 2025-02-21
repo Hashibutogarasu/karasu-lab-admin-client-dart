@@ -79,14 +79,14 @@ class _$CharactersControllerImportRequestFilterValuesCharacterPropertyValueTypes
       yield r'icon';
       yield serializers.serialize(
         object.icon,
-        specifiedType: const FullType(String),
+        specifiedType: const FullType.nullable(String),
       );
     }
     if (object.iconUrl != null) {
       yield r'icon_url';
       yield serializers.serialize(
         object.iconUrl,
-        specifiedType: const FullType(String),
+        specifiedType: const FullType.nullable(String),
       );
     }
     yield r'enum_string';
@@ -141,15 +141,17 @@ class _$CharactersControllerImportRequestFilterValuesCharacterPropertyValueTypes
         case r'icon':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
           result.icon = valueDes;
           break;
         case r'icon_url':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
           result.iconUrl = valueDes;
           break;
         case r'enum_string':

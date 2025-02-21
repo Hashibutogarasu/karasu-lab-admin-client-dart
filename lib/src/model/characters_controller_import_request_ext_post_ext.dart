@@ -75,7 +75,7 @@ class _$CharactersControllerImportRequestExtPostExtSerializer implements Primiti
       yield r'post_avater_url';
       yield serializers.serialize(
         object.postAvaterUrl,
-        specifiedType: const FullType(String),
+        specifiedType: const FullType.nullable(String),
       );
     }
     yield r'url';
@@ -130,8 +130,9 @@ class _$CharactersControllerImportRequestExtPostExtSerializer implements Primiti
         case r'post_avater_url':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
           result.postAvaterUrl = valueDes;
           break;
         case r'url':

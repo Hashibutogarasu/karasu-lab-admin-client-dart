@@ -22,6 +22,16 @@ void main() {
       // TODO
     });
 
+    // String iconUrl
+    test('to test the property `iconUrl`', () async {
+      // TODO
+    });
+
+    // String thumbnailUrl
+    test('to test the property `thumbnailUrl`', () async {
+      // TODO
+    });
+
     // String description
     test('to test the property `description`', () async {
       // TODO

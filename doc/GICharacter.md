@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **iconUrl** | **String** |  | 
 **element** | **String** |  | [optional] 
-**rarity** | **num** |  | [optional] 
+**rarity** | **num** |  | 
 **headerImgUrl** | **String** |  | 
 **weaponType** | **String** |  | [optional] 
 **property** | **String** |  | [optional] 

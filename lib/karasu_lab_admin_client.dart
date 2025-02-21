@@ -38,6 +38,11 @@ export 'package:karasu_lab_admin_client/src/model/characters_controller_import_r
 export 'package:karasu_lab_admin_client/src/model/characters_controller_import_request_modules_inner_components_inner.dart';
 export 'package:karasu_lab_admin_client/src/model/country.dart';
 export 'package:karasu_lab_admin_client/src/model/create_character_request.dart';
+export 'package:karasu_lab_admin_client/src/model/create_character_request_artifact_set_inner.dart';
+export 'package:karasu_lab_admin_client/src/model/create_character_request_galleries_inner.dart';
+export 'package:karasu_lab_admin_client/src/model/create_character_request_region.dart';
+export 'package:karasu_lab_admin_client/src/model/create_character_request_version.dart';
+export 'package:karasu_lab_admin_client/src/model/create_character_request_weapon.dart';
 export 'package:karasu_lab_admin_client/src/model/gi_character.dart';
 export 'package:karasu_lab_admin_client/src/model/galleries_controller_create_request.dart';
 export 'package:karasu_lab_admin_client/src/model/galleries_controller_update_request.dart';
@@ -54,6 +59,12 @@ export 'package:karasu_lab_admin_client/src/model/hi3_characters_controller_upda
 export 'package:karasu_lab_admin_client/src/model/hi3_characters_controller_update_request_stigmatas_inner.dart';
 export 'package:karasu_lab_admin_client/src/model/hi3_characters_controller_update_request_weapons_inner.dart';
 export 'package:karasu_lab_admin_client/src/model/update_character_request.dart';
+export 'package:karasu_lab_admin_client/src/model/update_character_request_artifact_set_inner.dart';
+export 'package:karasu_lab_admin_client/src/model/update_character_request_galleries_inner.dart';
+export 'package:karasu_lab_admin_client/src/model/update_character_request_region.dart';
+export 'package:karasu_lab_admin_client/src/model/update_character_request_version.dart';
+export 'package:karasu_lab_admin_client/src/model/update_character_request_weapon.dart';
+export 'package:karasu_lab_admin_client/src/model/update_character_request_weapon_version.dart';
 export 'package:karasu_lab_admin_client/src/model/versions_entity.dart';
 export 'package:karasu_lab_admin_client/src/model/weapon.dart';
 

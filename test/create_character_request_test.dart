@@ -27,13 +27,8 @@ void main() {
       // TODO
     });
 
-    // String region
-    test('to test the property `region`', () async {
-      // TODO
-    });
-
-    // String weapon
-    test('to test the property `weapon`', () async {
+    // int rarity
+    test('to test the property `rarity`', () async {
       // TODO
     });
 
@@ -42,18 +37,8 @@ void main() {
       // TODO
     });
 
-    // BuiltList<String> artifactSet
-    test('to test the property `artifactSet`', () async {
-      // TODO
-    });
-
     // String weaponType
     test('to test the property `weaponType`', () async {
-      // TODO
-    });
-
-    // int rarity
-    test('to test the property `rarity`', () async {
       // TODO
     });
 
@@ -62,13 +47,38 @@ void main() {
       // TODO
     });
 
-    // String version
+    // bool unimplemented (default value: false)
+    test('to test the property `unimplemented`', () async {
+      // TODO
+    });
+
+    // String implementedDate
+    test('to test the property `implementedDate`', () async {
+      // TODO
+    });
+
+    // CreateCharacterRequestRegion region
+    test('to test the property `region`', () async {
+      // TODO
+    });
+
+    // CreateCharacterRequestWeapon weapon
+    test('to test the property `weapon`', () async {
+      // TODO
+    });
+
+    // CreateCharacterRequestVersion version
     test('to test the property `version`', () async {
       // TODO
     });
 
-    // bool unimplemented (default value: false)
-    test('to test the property `unimplemented`', () async {
+    // BuiltList<CreateCharacterRequestGalleriesInner> galleries (default value: ListBuilder())
+    test('to test the property `galleries`', () async {
+      // TODO
+    });
+
+    // BuiltList<CreateCharacterRequestArtifactSetInner> artifactSet (default value: ListBuilder())
+    test('to test the property `artifactSet`', () async {
       // TODO
     });
 

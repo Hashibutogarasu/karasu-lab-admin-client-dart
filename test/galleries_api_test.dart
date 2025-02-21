@@ -17,7 +17,7 @@ void main() {
       // TODO
     });
 
-    //Future galleriesControllerUpdate(ArtifactSetsControllerUpdateRequest artifactSetsControllerUpdateRequest) async
+    //Future galleriesControllerUpdate(GalleriesControllerUpdateRequest galleriesControllerUpdateRequest) async
     test('test galleriesControllerUpdate', () async {
       // TODO
     });

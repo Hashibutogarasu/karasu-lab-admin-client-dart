@@ -27,23 +27,8 @@ void main() {
       // TODO
     });
 
-    // String headerImgUrl
-    test('to test the property `headerImgUrl`', () async {
-      // TODO
-    });
-
     // String element
     test('to test the property `element`', () async {
-      // TODO
-    });
-
-    // String region
-    test('to test the property `region`', () async {
-      // TODO
-    });
-
-    // String weaponType
-    test('to test the property `weaponType`', () async {
       // TODO
     });
 
@@ -52,18 +37,63 @@ void main() {
       // TODO
     });
 
+    // String headerImgUrl
+    test('to test the property `headerImgUrl`', () async {
+      // TODO
+    });
+
+    // String weaponType
+    test('to test the property `weaponType`', () async {
+      // TODO
+    });
+
     // String property
     test('to test the property `property`', () async {
       // TODO
     });
 
-    // String version
+    // bool unimplemented (default value: false)
+    test('to test the property `unimplemented`', () async {
+      // TODO
+    });
+
+    // String implementedDate
+    test('to test the property `implementedDate`', () async {
+      // TODO
+    });
+
+    // UpdateCharacterRequestRegion region
+    test('to test the property `region`', () async {
+      // TODO
+    });
+
+    // UpdateCharacterRequestWeapon weapon
+    test('to test the property `weapon`', () async {
+      // TODO
+    });
+
+    // UpdateCharacterRequestVersion version
     test('to test the property `version`', () async {
       // TODO
     });
 
-    // bool unimplemented
-    test('to test the property `unimplemented`', () async {
+    // BuiltList<UpdateCharacterRequestGalleriesInner> galleries
+    test('to test the property `galleries`', () async {
+      // TODO
+    });
+
+    // BuiltList<UpdateCharacterRequestArtifactSetInner> artifactSet
+    test('to test the property `artifactSet`', () async {
+      // TODO
+    });
+
+    // String createdAt
+    test('to test the property `createdAt`', () async {
+      // TODO
+    });
+
+    // String updatedAt
+    test('to test the property `updatedAt`', () async {
       // TODO
     });
 

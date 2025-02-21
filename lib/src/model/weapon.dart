@@ -16,8 +16,6 @@ part 'weapon.g.dart';
 /// Properties:
 /// * [id] 
 /// * [name] 
-/// * [createdAt] 
-/// * [updatedAt] 
 /// * [description] 
 /// * [iconUrl] 
 /// * [rarity] 
@@ -25,6 +23,8 @@ part 'weapon.g.dart';
 /// * [type] 
 /// * [characters] 
 /// * [version] 
+/// * [createdAt] 
+/// * [updatedAt] 
 @BuiltValue()
 abstract class Weapon implements Built<Weapon, WeaponBuilder> {
   @BuiltValueField(wireName: r'id')
@@ -32,12 +32,6 @@ abstract class Weapon implements Built<Weapon, WeaponBuilder> {
 
   @BuiltValueField(wireName: r'name')
   String get name;
-
-  @BuiltValueField(wireName: r'createdAt')
-  DateTime get createdAt;
-
-  @BuiltValueField(wireName: r'updatedAt')
-  DateTime get updatedAt;
 
   @BuiltValueField(wireName: r'description')
   String? get description;
@@ -59,6 +53,12 @@ abstract class Weapon implements Built<Weapon, WeaponBuilder> {
 
   @BuiltValueField(wireName: r'version')
   VersionsEntity? get version;
+
+  @BuiltValueField(wireName: r'createdAt')
+  DateTime get createdAt;
+
+  @BuiltValueField(wireName: r'updatedAt')
+  DateTime get updatedAt;
 
   Weapon._();
 
@@ -92,16 +92,6 @@ class _$WeaponSerializer implements PrimitiveSerializer<Weapon> {
     yield serializers.serialize(
       object.name,
       specifiedType: const FullType(String),
-    );
-    yield r'createdAt';
-    yield serializers.serialize(
-      object.createdAt,
-      specifiedType: const FullType(DateTime),
-    );
-    yield r'updatedAt';
-    yield serializers.serialize(
-      object.updatedAt,
-      specifiedType: const FullType(DateTime),
     );
     if (object.description != null) {
       yield r'description';
@@ -144,6 +134,16 @@ class _$WeaponSerializer implements PrimitiveSerializer<Weapon> {
         specifiedType: const FullType.nullable(VersionsEntity),
       );
     }
+    yield r'createdAt';
+    yield serializers.serialize(
+      object.createdAt,
+      specifiedType: const FullType(DateTime),
+    );
+    yield r'updatedAt';
+    yield serializers.serialize(
+      object.updatedAt,
+      specifiedType: const FullType(DateTime),
+    );
   }
 
   @override
@@ -180,20 +180,6 @@ class _$WeaponSerializer implements PrimitiveSerializer<Weapon> {
             specifiedType: const FullType(String),
           ) as String;
           result.name = valueDes;
-          break;
-        case r'createdAt':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(DateTime),
-          ) as DateTime;
-          result.createdAt = valueDes;
-          break;
-        case r'updatedAt':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(DateTime),
-          ) as DateTime;
-          result.updatedAt = valueDes;
           break;
         case r'description':
           final valueDes = serializers.deserialize(
@@ -246,6 +232,20 @@ class _$WeaponSerializer implements PrimitiveSerializer<Weapon> {
           ) as VersionsEntity?;
           if (valueDes == null) continue;
           result.version.replace(valueDes);
+          break;
+        case r'createdAt':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(DateTime),
+          ) as DateTime;
+          result.createdAt = valueDes;
+          break;
+        case r'updatedAt':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(DateTime),
+          ) as DateTime;
+          result.updatedAt = valueDes;
           break;
         default:
           unhandled.add(key);

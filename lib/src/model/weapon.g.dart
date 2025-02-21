@@ -12,10 +12,6 @@ class _$Weapon extends Weapon {
   @override
   final String name;
   @override
-  final DateTime createdAt;
-  @override
-  final DateTime updatedAt;
-  @override
   final String? description;
   @override
   final String iconUrl;
@@ -29,6 +25,10 @@ class _$Weapon extends Weapon {
   final BuiltList<GICharacter>? characters;
   @override
   final VersionsEntity? version;
+  @override
+  final DateTime createdAt;
+  @override
+  final DateTime updatedAt;
 
   factory _$Weapon([void Function(WeaponBuilder)? updates]) =>
       (new WeaponBuilder()..update(updates))._build();
@@ -36,24 +36,24 @@ class _$Weapon extends Weapon {
   _$Weapon._(
       {required this.id,
       required this.name,
-      required this.createdAt,
-      required this.updatedAt,
       this.description,
       required this.iconUrl,
       required this.rarity,
       required this.effect,
       required this.type,
       this.characters,
-      this.version})
+      this.version,
+      required this.createdAt,
+      required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(id, r'Weapon', 'id');
     BuiltValueNullFieldError.checkNotNull(name, r'Weapon', 'name');
-    BuiltValueNullFieldError.checkNotNull(createdAt, r'Weapon', 'createdAt');
-    BuiltValueNullFieldError.checkNotNull(updatedAt, r'Weapon', 'updatedAt');
     BuiltValueNullFieldError.checkNotNull(iconUrl, r'Weapon', 'iconUrl');
     BuiltValueNullFieldError.checkNotNull(rarity, r'Weapon', 'rarity');
     BuiltValueNullFieldError.checkNotNull(effect, r'Weapon', 'effect');
     BuiltValueNullFieldError.checkNotNull(type, r'Weapon', 'type');
+    BuiltValueNullFieldError.checkNotNull(createdAt, r'Weapon', 'createdAt');
+    BuiltValueNullFieldError.checkNotNull(updatedAt, r'Weapon', 'updatedAt');
   }
 
   @override
@@ -69,15 +69,15 @@ class _$Weapon extends Weapon {
     return other is Weapon &&
         id == other.id &&
         name == other.name &&
-        createdAt == other.createdAt &&
-        updatedAt == other.updatedAt &&
         description == other.description &&
         iconUrl == other.iconUrl &&
         rarity == other.rarity &&
         effect == other.effect &&
         type == other.type &&
         characters == other.characters &&
-        version == other.version;
+        version == other.version &&
+        createdAt == other.createdAt &&
+        updatedAt == other.updatedAt;
   }
 
   @override
@@ -85,8 +85,6 @@ class _$Weapon extends Weapon {
     var _$hash = 0;
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
-    _$hash = $jc(_$hash, createdAt.hashCode);
-    _$hash = $jc(_$hash, updatedAt.hashCode);
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, iconUrl.hashCode);
     _$hash = $jc(_$hash, rarity.hashCode);
@@ -94,6 +92,8 @@ class _$Weapon extends Weapon {
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jc(_$hash, characters.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, updatedAt.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -103,15 +103,15 @@ class _$Weapon extends Weapon {
     return (newBuiltValueToStringHelper(r'Weapon')
           ..add('id', id)
           ..add('name', name)
-          ..add('createdAt', createdAt)
-          ..add('updatedAt', updatedAt)
           ..add('description', description)
           ..add('iconUrl', iconUrl)
           ..add('rarity', rarity)
           ..add('effect', effect)
           ..add('type', type)
           ..add('characters', characters)
-          ..add('version', version))
+          ..add('version', version)
+          ..add('createdAt', createdAt)
+          ..add('updatedAt', updatedAt))
         .toString();
   }
 }
@@ -126,14 +126,6 @@ class WeaponBuilder implements Builder<Weapon, WeaponBuilder> {
   String? _name;
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
-
-  DateTime? _createdAt;
-  DateTime? get createdAt => _$this._createdAt;
-  set createdAt(DateTime? createdAt) => _$this._createdAt = createdAt;
-
-  DateTime? _updatedAt;
-  DateTime? get updatedAt => _$this._updatedAt;
-  set updatedAt(DateTime? updatedAt) => _$this._updatedAt = updatedAt;
 
   String? _description;
   String? get description => _$this._description;
@@ -166,6 +158,14 @@ class WeaponBuilder implements Builder<Weapon, WeaponBuilder> {
       _$this._version ??= new VersionsEntityBuilder();
   set version(VersionsEntityBuilder? version) => _$this._version = version;
 
+  DateTime? _createdAt;
+  DateTime? get createdAt => _$this._createdAt;
+  set createdAt(DateTime? createdAt) => _$this._createdAt = createdAt;
+
+  DateTime? _updatedAt;
+  DateTime? get updatedAt => _$this._updatedAt;
+  set updatedAt(DateTime? updatedAt) => _$this._updatedAt = updatedAt;
+
   WeaponBuilder() {
     Weapon._defaults(this);
   }
@@ -175,8 +175,6 @@ class WeaponBuilder implements Builder<Weapon, WeaponBuilder> {
     if ($v != null) {
       _id = $v.id;
       _name = $v.name;
-      _createdAt = $v.createdAt;
-      _updatedAt = $v.updatedAt;
       _description = $v.description;
       _iconUrl = $v.iconUrl;
       _rarity = $v.rarity;
@@ -184,6 +182,8 @@ class WeaponBuilder implements Builder<Weapon, WeaponBuilder> {
       _type = $v.type;
       _characters = $v.characters?.toBuilder();
       _version = $v.version?.toBuilder();
+      _createdAt = $v.createdAt;
+      _updatedAt = $v.updatedAt;
       _$v = null;
     }
     return this;
@@ -211,10 +211,6 @@ class WeaponBuilder implements Builder<Weapon, WeaponBuilder> {
               id: BuiltValueNullFieldError.checkNotNull(id, r'Weapon', 'id'),
               name: BuiltValueNullFieldError.checkNotNull(
                   name, r'Weapon', 'name'),
-              createdAt: BuiltValueNullFieldError.checkNotNull(
-                  createdAt, r'Weapon', 'createdAt'),
-              updatedAt: BuiltValueNullFieldError.checkNotNull(
-                  updatedAt, r'Weapon', 'updatedAt'),
               description: description,
               iconUrl: BuiltValueNullFieldError.checkNotNull(
                   iconUrl, r'Weapon', 'iconUrl'),
@@ -225,7 +221,11 @@ class WeaponBuilder implements Builder<Weapon, WeaponBuilder> {
               type: BuiltValueNullFieldError.checkNotNull(
                   type, r'Weapon', 'type'),
               characters: _characters?.build(),
-              version: _version?.build());
+              version: _version?.build(),
+              createdAt: BuiltValueNullFieldError.checkNotNull(
+                  createdAt, r'Weapon', 'createdAt'),
+              updatedAt: BuiltValueNullFieldError.checkNotNull(
+                  updatedAt, r'Weapon', 'updatedAt'));
     } catch (_) {
       late String _$failedField;
       try {
