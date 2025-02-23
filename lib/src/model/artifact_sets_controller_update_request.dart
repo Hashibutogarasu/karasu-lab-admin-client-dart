@@ -6,9 +6,9 @@
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'update_character_request_artifact_set_inner.g.dart';
+part 'artifact_sets_controller_update_request.g.dart';
 
-/// UpdateCharacterRequestArtifactSetInner
+/// ArtifactSetsControllerUpdateRequest
 ///
 /// Properties:
 /// * [id] 
@@ -20,7 +20,7 @@ part 'update_character_request_artifact_set_inner.g.dart';
 /// * [twoSetEffect] 
 /// * [fourSetEffect] 
 @BuiltValue()
-abstract class UpdateCharacterRequestArtifactSetInner implements Built<UpdateCharacterRequestArtifactSetInner, UpdateCharacterRequestArtifactSetInnerBuilder> {
+abstract class ArtifactSetsControllerUpdateRequest implements Built<ArtifactSetsControllerUpdateRequest, ArtifactSetsControllerUpdateRequestBuilder> {
   @BuiltValueField(wireName: r'id')
   String get id;
 
@@ -45,27 +45,27 @@ abstract class UpdateCharacterRequestArtifactSetInner implements Built<UpdateCha
   @BuiltValueField(wireName: r'four_set_effect')
   String get fourSetEffect;
 
-  UpdateCharacterRequestArtifactSetInner._();
+  ArtifactSetsControllerUpdateRequest._();
 
-  factory UpdateCharacterRequestArtifactSetInner([void updates(UpdateCharacterRequestArtifactSetInnerBuilder b)]) = _$UpdateCharacterRequestArtifactSetInner;
+  factory ArtifactSetsControllerUpdateRequest([void updates(ArtifactSetsControllerUpdateRequestBuilder b)]) = _$ArtifactSetsControllerUpdateRequest;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(UpdateCharacterRequestArtifactSetInnerBuilder b) => b;
+  static void _defaults(ArtifactSetsControllerUpdateRequestBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<UpdateCharacterRequestArtifactSetInner> get serializer => _$UpdateCharacterRequestArtifactSetInnerSerializer();
+  static Serializer<ArtifactSetsControllerUpdateRequest> get serializer => _$ArtifactSetsControllerUpdateRequestSerializer();
 }
 
-class _$UpdateCharacterRequestArtifactSetInnerSerializer implements PrimitiveSerializer<UpdateCharacterRequestArtifactSetInner> {
+class _$ArtifactSetsControllerUpdateRequestSerializer implements PrimitiveSerializer<ArtifactSetsControllerUpdateRequest> {
   @override
-  final Iterable<Type> types = const [UpdateCharacterRequestArtifactSetInner, _$UpdateCharacterRequestArtifactSetInner];
+  final Iterable<Type> types = const [ArtifactSetsControllerUpdateRequest, _$ArtifactSetsControllerUpdateRequest];
 
   @override
-  final String wireName = r'UpdateCharacterRequestArtifactSetInner';
+  final String wireName = r'ArtifactSetsControllerUpdateRequest';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    UpdateCharacterRequestArtifactSetInner object, {
+    ArtifactSetsControllerUpdateRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     yield r'id';
@@ -113,7 +113,7 @@ class _$UpdateCharacterRequestArtifactSetInnerSerializer implements PrimitiveSer
   @override
   Object serialize(
     Serializers serializers,
-    UpdateCharacterRequestArtifactSetInner object, {
+    ArtifactSetsControllerUpdateRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -124,7 +124,7 @@ class _$UpdateCharacterRequestArtifactSetInnerSerializer implements PrimitiveSer
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required UpdateCharacterRequestArtifactSetInnerBuilder result,
+    required ArtifactSetsControllerUpdateRequestBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -196,12 +196,12 @@ class _$UpdateCharacterRequestArtifactSetInnerSerializer implements PrimitiveSer
   }
 
   @override
-  UpdateCharacterRequestArtifactSetInner deserialize(
+  ArtifactSetsControllerUpdateRequest deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = UpdateCharacterRequestArtifactSetInnerBuilder();
+    final result = ArtifactSetsControllerUpdateRequestBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

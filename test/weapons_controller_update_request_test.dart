@@ -1,12 +1,12 @@
 import 'package:test/test.dart';
 import 'package:karasu_lab_admin_client/karasu_lab_admin_client.dart';
 
-// tests for UpdateCharacterRequestArtifactSetInner
+// tests for WeaponsControllerUpdateRequest
 void main() {
-  final instance = UpdateCharacterRequestArtifactSetInnerBuilder();
+  final instance = WeaponsControllerUpdateRequestBuilder();
   // TODO add properties to the builder and call build()
 
-  group(UpdateCharacterRequestArtifactSetInner, () {
+  group(WeaponsControllerUpdateRequest, () {
     // String id
     test('to test the property `id`', () async {
       // TODO
@@ -32,18 +32,18 @@ void main() {
       // TODO
     });
 
-    // String oneSetEffect
-    test('to test the property `oneSetEffect`', () async {
+    // String effect
+    test('to test the property `effect`', () async {
       // TODO
     });
 
-    // String twoSetEffect
-    test('to test the property `twoSetEffect`', () async {
+    // String type
+    test('to test the property `type`', () async {
       // TODO
     });
 
-    // String fourSetEffect
-    test('to test the property `fourSetEffect`', () async {
+    // UpdateCharacterRequestWeaponVersion version
+    test('to test the property `version`', () async {
       // TODO
     });
 

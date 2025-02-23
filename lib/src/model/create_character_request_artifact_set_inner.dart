@@ -15,8 +15,9 @@ part 'create_character_request_artifact_set_inner.g.dart';
 /// * [description] 
 /// * [iconUrl] 
 /// * [rarity] 
-/// * [twoPieceBonus] 
-/// * [fourPieceBonus] 
+/// * [oneSetEffect] 
+/// * [twoSetEffect] 
+/// * [fourSetEffect] 
 @BuiltValue()
 abstract class CreateCharacterRequestArtifactSetInner implements Built<CreateCharacterRequestArtifactSetInner, CreateCharacterRequestArtifactSetInnerBuilder> {
   @BuiltValueField(wireName: r'name')
@@ -31,11 +32,14 @@ abstract class CreateCharacterRequestArtifactSetInner implements Built<CreateCha
   @BuiltValueField(wireName: r'rarity')
   int get rarity;
 
-  @BuiltValueField(wireName: r'two_piece_bonus')
-  String get twoPieceBonus;
+  @BuiltValueField(wireName: r'one_set_effect')
+  String get oneSetEffect;
 
-  @BuiltValueField(wireName: r'four_piece_bonus')
-  String get fourPieceBonus;
+  @BuiltValueField(wireName: r'two_set_effect')
+  String get twoSetEffect;
+
+  @BuiltValueField(wireName: r'four_set_effect')
+  String get fourSetEffect;
 
   CreateCharacterRequestArtifactSetInner._();
 
@@ -80,14 +84,19 @@ class _$CreateCharacterRequestArtifactSetInnerSerializer implements PrimitiveSer
       object.rarity,
       specifiedType: const FullType(int),
     );
-    yield r'two_piece_bonus';
+    yield r'one_set_effect';
     yield serializers.serialize(
-      object.twoPieceBonus,
+      object.oneSetEffect,
       specifiedType: const FullType(String),
     );
-    yield r'four_piece_bonus';
+    yield r'two_set_effect';
     yield serializers.serialize(
-      object.fourPieceBonus,
+      object.twoSetEffect,
+      specifiedType: const FullType(String),
+    );
+    yield r'four_set_effect';
+    yield serializers.serialize(
+      object.fourSetEffect,
       specifiedType: const FullType(String),
     );
   }
@@ -141,19 +150,26 @@ class _$CreateCharacterRequestArtifactSetInnerSerializer implements PrimitiveSer
           ) as int;
           result.rarity = valueDes;
           break;
-        case r'two_piece_bonus':
+        case r'one_set_effect':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.twoPieceBonus = valueDes;
+          result.oneSetEffect = valueDes;
           break;
-        case r'four_piece_bonus':
+        case r'two_set_effect':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.fourPieceBonus = valueDes;
+          result.twoSetEffect = valueDes;
+          break;
+        case r'four_set_effect':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.fourSetEffect = valueDes;
           break;
         default:
           unhandled.add(key);

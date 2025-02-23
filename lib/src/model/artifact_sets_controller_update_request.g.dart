@@ -1,13 +1,15 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'create_character_request_artifact_set_inner.dart';
+part of 'artifact_sets_controller_update_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$CreateCharacterRequestArtifactSetInner
-    extends CreateCharacterRequestArtifactSetInner {
+class _$ArtifactSetsControllerUpdateRequest
+    extends ArtifactSetsControllerUpdateRequest {
+  @override
+  final String id;
   @override
   final String name;
   @override
@@ -23,14 +25,15 @@ class _$CreateCharacterRequestArtifactSetInner
   @override
   final String fourSetEffect;
 
-  factory _$CreateCharacterRequestArtifactSetInner(
-          [void Function(CreateCharacterRequestArtifactSetInnerBuilder)?
+  factory _$ArtifactSetsControllerUpdateRequest(
+          [void Function(ArtifactSetsControllerUpdateRequestBuilder)?
               updates]) =>
-      (new CreateCharacterRequestArtifactSetInnerBuilder()..update(updates))
+      (new ArtifactSetsControllerUpdateRequestBuilder()..update(updates))
           ._build();
 
-  _$CreateCharacterRequestArtifactSetInner._(
-      {required this.name,
+  _$ArtifactSetsControllerUpdateRequest._(
+      {required this.id,
+      required this.name,
       required this.description,
       required this.iconUrl,
       required this.rarity,
@@ -39,35 +42,37 @@ class _$CreateCharacterRequestArtifactSetInner
       required this.fourSetEffect})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        name, r'CreateCharacterRequestArtifactSetInner', 'name');
+        id, r'ArtifactSetsControllerUpdateRequest', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        description, r'CreateCharacterRequestArtifactSetInner', 'description');
+        name, r'ArtifactSetsControllerUpdateRequest', 'name');
     BuiltValueNullFieldError.checkNotNull(
-        iconUrl, r'CreateCharacterRequestArtifactSetInner', 'iconUrl');
+        description, r'ArtifactSetsControllerUpdateRequest', 'description');
     BuiltValueNullFieldError.checkNotNull(
-        rarity, r'CreateCharacterRequestArtifactSetInner', 'rarity');
-    BuiltValueNullFieldError.checkNotNull(oneSetEffect,
-        r'CreateCharacterRequestArtifactSetInner', 'oneSetEffect');
-    BuiltValueNullFieldError.checkNotNull(twoSetEffect,
-        r'CreateCharacterRequestArtifactSetInner', 'twoSetEffect');
-    BuiltValueNullFieldError.checkNotNull(fourSetEffect,
-        r'CreateCharacterRequestArtifactSetInner', 'fourSetEffect');
+        iconUrl, r'ArtifactSetsControllerUpdateRequest', 'iconUrl');
+    BuiltValueNullFieldError.checkNotNull(
+        rarity, r'ArtifactSetsControllerUpdateRequest', 'rarity');
+    BuiltValueNullFieldError.checkNotNull(
+        oneSetEffect, r'ArtifactSetsControllerUpdateRequest', 'oneSetEffect');
+    BuiltValueNullFieldError.checkNotNull(
+        twoSetEffect, r'ArtifactSetsControllerUpdateRequest', 'twoSetEffect');
+    BuiltValueNullFieldError.checkNotNull(
+        fourSetEffect, r'ArtifactSetsControllerUpdateRequest', 'fourSetEffect');
   }
 
   @override
-  CreateCharacterRequestArtifactSetInner rebuild(
-          void Function(CreateCharacterRequestArtifactSetInnerBuilder)
-              updates) =>
+  ArtifactSetsControllerUpdateRequest rebuild(
+          void Function(ArtifactSetsControllerUpdateRequestBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  CreateCharacterRequestArtifactSetInnerBuilder toBuilder() =>
-      new CreateCharacterRequestArtifactSetInnerBuilder()..replace(this);
+  ArtifactSetsControllerUpdateRequestBuilder toBuilder() =>
+      new ArtifactSetsControllerUpdateRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is CreateCharacterRequestArtifactSetInner &&
+    return other is ArtifactSetsControllerUpdateRequest &&
+        id == other.id &&
         name == other.name &&
         description == other.description &&
         iconUrl == other.iconUrl &&
@@ -80,6 +85,7 @@ class _$CreateCharacterRequestArtifactSetInner
   @override
   int get hashCode {
     var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, iconUrl.hashCode);
@@ -93,8 +99,8 @@ class _$CreateCharacterRequestArtifactSetInner
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(
-            r'CreateCharacterRequestArtifactSetInner')
+    return (newBuiltValueToStringHelper(r'ArtifactSetsControllerUpdateRequest')
+          ..add('id', id)
           ..add('name', name)
           ..add('description', description)
           ..add('iconUrl', iconUrl)
@@ -106,11 +112,15 @@ class _$CreateCharacterRequestArtifactSetInner
   }
 }
 
-class CreateCharacterRequestArtifactSetInnerBuilder
+class ArtifactSetsControllerUpdateRequestBuilder
     implements
-        Builder<CreateCharacterRequestArtifactSetInner,
-            CreateCharacterRequestArtifactSetInnerBuilder> {
-  _$CreateCharacterRequestArtifactSetInner? _$v;
+        Builder<ArtifactSetsControllerUpdateRequest,
+            ArtifactSetsControllerUpdateRequestBuilder> {
+  _$ArtifactSetsControllerUpdateRequest? _$v;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
 
   String? _name;
   String? get name => _$this._name;
@@ -141,13 +151,14 @@ class CreateCharacterRequestArtifactSetInnerBuilder
   set fourSetEffect(String? fourSetEffect) =>
       _$this._fourSetEffect = fourSetEffect;
 
-  CreateCharacterRequestArtifactSetInnerBuilder() {
-    CreateCharacterRequestArtifactSetInner._defaults(this);
+  ArtifactSetsControllerUpdateRequestBuilder() {
+    ArtifactSetsControllerUpdateRequest._defaults(this);
   }
 
-  CreateCharacterRequestArtifactSetInnerBuilder get _$this {
+  ArtifactSetsControllerUpdateRequestBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
+      _id = $v.id;
       _name = $v.name;
       _description = $v.description;
       _iconUrl = $v.iconUrl;
@@ -161,37 +172,39 @@ class CreateCharacterRequestArtifactSetInnerBuilder
   }
 
   @override
-  void replace(CreateCharacterRequestArtifactSetInner other) {
+  void replace(ArtifactSetsControllerUpdateRequest other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$CreateCharacterRequestArtifactSetInner;
+    _$v = other as _$ArtifactSetsControllerUpdateRequest;
   }
 
   @override
   void update(
-      void Function(CreateCharacterRequestArtifactSetInnerBuilder)? updates) {
+      void Function(ArtifactSetsControllerUpdateRequestBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  CreateCharacterRequestArtifactSetInner build() => _build();
+  ArtifactSetsControllerUpdateRequest build() => _build();
 
-  _$CreateCharacterRequestArtifactSetInner _build() {
+  _$ArtifactSetsControllerUpdateRequest _build() {
     final _$result = _$v ??
-        new _$CreateCharacterRequestArtifactSetInner._(
+        new _$ArtifactSetsControllerUpdateRequest._(
+            id: BuiltValueNullFieldError.checkNotNull(
+                id, r'ArtifactSetsControllerUpdateRequest', 'id'),
             name: BuiltValueNullFieldError.checkNotNull(
-                name, r'CreateCharacterRequestArtifactSetInner', 'name'),
+                name, r'ArtifactSetsControllerUpdateRequest', 'name'),
             description: BuiltValueNullFieldError.checkNotNull(
-                description, r'CreateCharacterRequestArtifactSetInner', 'description'),
+                description, r'ArtifactSetsControllerUpdateRequest', 'description'),
             iconUrl: BuiltValueNullFieldError.checkNotNull(
-                iconUrl, r'CreateCharacterRequestArtifactSetInner', 'iconUrl'),
+                iconUrl, r'ArtifactSetsControllerUpdateRequest', 'iconUrl'),
             rarity: BuiltValueNullFieldError.checkNotNull(
-                rarity, r'CreateCharacterRequestArtifactSetInner', 'rarity'),
+                rarity, r'ArtifactSetsControllerUpdateRequest', 'rarity'),
             oneSetEffect: BuiltValueNullFieldError.checkNotNull(
-                oneSetEffect, r'CreateCharacterRequestArtifactSetInner', 'oneSetEffect'),
+                oneSetEffect, r'ArtifactSetsControllerUpdateRequest', 'oneSetEffect'),
             twoSetEffect: BuiltValueNullFieldError.checkNotNull(
-                twoSetEffect, r'CreateCharacterRequestArtifactSetInner', 'twoSetEffect'),
-            fourSetEffect: BuiltValueNullFieldError.checkNotNull(
-                fourSetEffect, r'CreateCharacterRequestArtifactSetInner', 'fourSetEffect'));
+                twoSetEffect, r'ArtifactSetsControllerUpdateRequest', 'twoSetEffect'),
+            fourSetEffect:
+                BuiltValueNullFieldError.checkNotNull(fourSetEffect, r'ArtifactSetsControllerUpdateRequest', 'fourSetEffect'));
     replace(_$result);
     return _$result;
   }

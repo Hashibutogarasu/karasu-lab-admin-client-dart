@@ -27,13 +27,18 @@ void main() {
       // TODO
     });
 
-    // String twoPieceBonus
-    test('to test the property `twoPieceBonus`', () async {
+    // String oneSetEffect
+    test('to test the property `oneSetEffect`', () async {
       // TODO
     });
 
-    // String fourPieceBonus
-    test('to test the property `fourPieceBonus`', () async {
+    // String twoSetEffect
+    test('to test the property `twoSetEffect`', () async {
+      // TODO
+    });
+
+    // String fourSetEffect
+    test('to test the property `fourSetEffect`', () async {
       // TODO
     });
 

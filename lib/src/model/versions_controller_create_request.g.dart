@@ -1,15 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'update_character_request_weapon_version.dart';
+part of 'versions_controller_create_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$UpdateCharacterRequestWeaponVersion
-    extends UpdateCharacterRequestWeaponVersion {
-  @override
-  final String id;
+class _$VersionsControllerCreateRequest
+    extends VersionsControllerCreateRequest {
   @override
   final String name;
   @override
@@ -21,103 +19,75 @@ class _$UpdateCharacterRequestWeaponVersion
       artifactSets;
   @override
   final BuiltList<UpdateCharacterRequestWeaponVersionRegionsInner>? regions;
-  @override
-  final String createdAt;
-  @override
-  final String updatedAt;
 
-  factory _$UpdateCharacterRequestWeaponVersion(
-          [void Function(UpdateCharacterRequestWeaponVersionBuilder)?
-              updates]) =>
-      (new UpdateCharacterRequestWeaponVersionBuilder()..update(updates))
-          ._build();
+  factory _$VersionsControllerCreateRequest(
+          [void Function(VersionsControllerCreateRequestBuilder)? updates]) =>
+      (new VersionsControllerCreateRequestBuilder()..update(updates))._build();
 
-  _$UpdateCharacterRequestWeaponVersion._(
-      {required this.id,
-      required this.name,
+  _$VersionsControllerCreateRequest._(
+      {required this.name,
       required this.versionString,
       required this.released,
       this.artifactSets,
-      this.regions,
-      required this.createdAt,
-      required this.updatedAt})
+      this.regions})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        id, r'UpdateCharacterRequestWeaponVersion', 'id');
+        name, r'VersionsControllerCreateRequest', 'name');
     BuiltValueNullFieldError.checkNotNull(
-        name, r'UpdateCharacterRequestWeaponVersion', 'name');
+        versionString, r'VersionsControllerCreateRequest', 'versionString');
     BuiltValueNullFieldError.checkNotNull(
-        versionString, r'UpdateCharacterRequestWeaponVersion', 'versionString');
-    BuiltValueNullFieldError.checkNotNull(
-        released, r'UpdateCharacterRequestWeaponVersion', 'released');
-    BuiltValueNullFieldError.checkNotNull(
-        createdAt, r'UpdateCharacterRequestWeaponVersion', 'createdAt');
-    BuiltValueNullFieldError.checkNotNull(
-        updatedAt, r'UpdateCharacterRequestWeaponVersion', 'updatedAt');
+        released, r'VersionsControllerCreateRequest', 'released');
   }
 
   @override
-  UpdateCharacterRequestWeaponVersion rebuild(
-          void Function(UpdateCharacterRequestWeaponVersionBuilder) updates) =>
+  VersionsControllerCreateRequest rebuild(
+          void Function(VersionsControllerCreateRequestBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  UpdateCharacterRequestWeaponVersionBuilder toBuilder() =>
-      new UpdateCharacterRequestWeaponVersionBuilder()..replace(this);
+  VersionsControllerCreateRequestBuilder toBuilder() =>
+      new VersionsControllerCreateRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is UpdateCharacterRequestWeaponVersion &&
-        id == other.id &&
+    return other is VersionsControllerCreateRequest &&
         name == other.name &&
         versionString == other.versionString &&
         released == other.released &&
         artifactSets == other.artifactSets &&
-        regions == other.regions &&
-        createdAt == other.createdAt &&
-        updatedAt == other.updatedAt;
+        regions == other.regions;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, versionString.hashCode);
     _$hash = $jc(_$hash, released.hashCode);
     _$hash = $jc(_$hash, artifactSets.hashCode);
     _$hash = $jc(_$hash, regions.hashCode);
-    _$hash = $jc(_$hash, createdAt.hashCode);
-    _$hash = $jc(_$hash, updatedAt.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'UpdateCharacterRequestWeaponVersion')
-          ..add('id', id)
+    return (newBuiltValueToStringHelper(r'VersionsControllerCreateRequest')
           ..add('name', name)
           ..add('versionString', versionString)
           ..add('released', released)
           ..add('artifactSets', artifactSets)
-          ..add('regions', regions)
-          ..add('createdAt', createdAt)
-          ..add('updatedAt', updatedAt))
+          ..add('regions', regions))
         .toString();
   }
 }
 
-class UpdateCharacterRequestWeaponVersionBuilder
+class VersionsControllerCreateRequestBuilder
     implements
-        Builder<UpdateCharacterRequestWeaponVersion,
-            UpdateCharacterRequestWeaponVersionBuilder> {
-  _$UpdateCharacterRequestWeaponVersion? _$v;
-
-  String? _id;
-  String? get id => _$this._id;
-  set id(String? id) => _$this._id = id;
+        Builder<VersionsControllerCreateRequest,
+            VersionsControllerCreateRequestBuilder> {
+  _$VersionsControllerCreateRequest? _$v;
 
   String? _name;
   String? get name => _$this._name;
@@ -151,70 +121,52 @@ class UpdateCharacterRequestWeaponVersionBuilder
               regions) =>
       _$this._regions = regions;
 
-  String? _createdAt;
-  String? get createdAt => _$this._createdAt;
-  set createdAt(String? createdAt) => _$this._createdAt = createdAt;
-
-  String? _updatedAt;
-  String? get updatedAt => _$this._updatedAt;
-  set updatedAt(String? updatedAt) => _$this._updatedAt = updatedAt;
-
-  UpdateCharacterRequestWeaponVersionBuilder() {
-    UpdateCharacterRequestWeaponVersion._defaults(this);
+  VersionsControllerCreateRequestBuilder() {
+    VersionsControllerCreateRequest._defaults(this);
   }
 
-  UpdateCharacterRequestWeaponVersionBuilder get _$this {
+  VersionsControllerCreateRequestBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _id = $v.id;
       _name = $v.name;
       _versionString = $v.versionString;
       _released = $v.released;
       _artifactSets = $v.artifactSets?.toBuilder();
       _regions = $v.regions?.toBuilder();
-      _createdAt = $v.createdAt;
-      _updatedAt = $v.updatedAt;
       _$v = null;
     }
     return this;
   }
 
   @override
-  void replace(UpdateCharacterRequestWeaponVersion other) {
+  void replace(VersionsControllerCreateRequest other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$UpdateCharacterRequestWeaponVersion;
+    _$v = other as _$VersionsControllerCreateRequest;
   }
 
   @override
-  void update(
-      void Function(UpdateCharacterRequestWeaponVersionBuilder)? updates) {
+  void update(void Function(VersionsControllerCreateRequestBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  UpdateCharacterRequestWeaponVersion build() => _build();
+  VersionsControllerCreateRequest build() => _build();
 
-  _$UpdateCharacterRequestWeaponVersion _build() {
-    _$UpdateCharacterRequestWeaponVersion _$result;
+  _$VersionsControllerCreateRequest _build() {
+    _$VersionsControllerCreateRequest _$result;
     try {
       _$result = _$v ??
-          new _$UpdateCharacterRequestWeaponVersion._(
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'UpdateCharacterRequestWeaponVersion', 'id'),
+          new _$VersionsControllerCreateRequest._(
               name: BuiltValueNullFieldError.checkNotNull(
-                  name, r'UpdateCharacterRequestWeaponVersion', 'name'),
+                  name, r'VersionsControllerCreateRequest', 'name'),
               versionString: BuiltValueNullFieldError.checkNotNull(
                   versionString,
-                  r'UpdateCharacterRequestWeaponVersion',
+                  r'VersionsControllerCreateRequest',
                   'versionString'),
               released: BuiltValueNullFieldError.checkNotNull(
-                  released, r'UpdateCharacterRequestWeaponVersion', 'released'),
+                  released, r'VersionsControllerCreateRequest', 'released'),
               artifactSets: _artifactSets?.build(),
-              regions: _regions?.build(),
-              createdAt: BuiltValueNullFieldError.checkNotNull(createdAt,
-                  r'UpdateCharacterRequestWeaponVersion', 'createdAt'),
-              updatedAt: BuiltValueNullFieldError.checkNotNull(updatedAt,
-                  r'UpdateCharacterRequestWeaponVersion', 'updatedAt'));
+              regions: _regions?.build());
     } catch (_) {
       late String _$failedField;
       try {
@@ -224,9 +176,7 @@ class UpdateCharacterRequestWeaponVersionBuilder
         _regions?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            r'UpdateCharacterRequestWeaponVersion',
-            _$failedField,
-            e.toString());
+            r'VersionsControllerCreateRequest', _$failedField, e.toString());
       }
       rethrow;
     }

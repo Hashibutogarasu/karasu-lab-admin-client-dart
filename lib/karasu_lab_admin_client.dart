@@ -11,9 +11,13 @@ export 'package:karasu_lab_admin_client/src/serializers.dart';
 export 'package:karasu_lab_admin_client/src/model/date.dart';
 
 export 'package:karasu_lab_admin_client/src/api/admin_auth_api.dart';
+export 'package:karasu_lab_admin_client/src/api/artifact_sets_api.dart';
 export 'package:karasu_lab_admin_client/src/api/characters_api.dart';
 export 'package:karasu_lab_admin_client/src/api/galleries_api.dart';
 export 'package:karasu_lab_admin_client/src/api/hi3_characters_api.dart';
+export 'package:karasu_lab_admin_client/src/api/regions_api.dart';
+export 'package:karasu_lab_admin_client/src/api/versions_api.dart';
+export 'package:karasu_lab_admin_client/src/api/weapons_api.dart';
 
 export 'package:karasu_lab_admin_client/src/model/admin_auth_controller_change_password_request.dart';
 export 'package:karasu_lab_admin_client/src/model/admin_auth_controller_disable_mfa_request.dart';
@@ -25,6 +29,7 @@ export 'package:karasu_lab_admin_client/src/model/admin_auth_controller_signin_c
 export 'package:karasu_lab_admin_client/src/model/admin_auth_controller_signin_request.dart';
 export 'package:karasu_lab_admin_client/src/model/admin_auth_controller_signup_request.dart';
 export 'package:karasu_lab_admin_client/src/model/artifact_sets.dart';
+export 'package:karasu_lab_admin_client/src/model/artifact_sets_controller_update_request.dart';
 export 'package:karasu_lab_admin_client/src/model/artifacts.dart';
 export 'package:karasu_lab_admin_client/src/model/characters_controller_import_from_hoyo_lab_query_parameter.dart';
 export 'package:karasu_lab_admin_client/src/model/characters_controller_import_request.dart';
@@ -58,6 +63,7 @@ export 'package:karasu_lab_admin_client/src/model/hi3_characters_controller_upda
 export 'package:karasu_lab_admin_client/src/model/hi3_characters_controller_update_request_skills_inner.dart';
 export 'package:karasu_lab_admin_client/src/model/hi3_characters_controller_update_request_stigmatas_inner.dart';
 export 'package:karasu_lab_admin_client/src/model/hi3_characters_controller_update_request_weapons_inner.dart';
+export 'package:karasu_lab_admin_client/src/model/regions_controller_update_request.dart';
 export 'package:karasu_lab_admin_client/src/model/update_character_request.dart';
 export 'package:karasu_lab_admin_client/src/model/update_character_request_artifact_set_inner.dart';
 export 'package:karasu_lab_admin_client/src/model/update_character_request_galleries_inner.dart';
@@ -65,6 +71,11 @@ export 'package:karasu_lab_admin_client/src/model/update_character_request_regio
 export 'package:karasu_lab_admin_client/src/model/update_character_request_version.dart';
 export 'package:karasu_lab_admin_client/src/model/update_character_request_weapon.dart';
 export 'package:karasu_lab_admin_client/src/model/update_character_request_weapon_version.dart';
+export 'package:karasu_lab_admin_client/src/model/update_character_request_weapon_version_artifact_sets_inner.dart';
+export 'package:karasu_lab_admin_client/src/model/update_character_request_weapon_version_regions_inner.dart';
+export 'package:karasu_lab_admin_client/src/model/versions_controller_create_request.dart';
+export 'package:karasu_lab_admin_client/src/model/versions_controller_update_request.dart';
 export 'package:karasu_lab_admin_client/src/model/versions_entity.dart';
 export 'package:karasu_lab_admin_client/src/model/weapon.dart';
+export 'package:karasu_lab_admin_client/src/model/weapons_controller_update_request.dart';
 

@@ -19,9 +19,11 @@ class _$UpdateCharacterRequestArtifactSetInner
   @override
   final int rarity;
   @override
-  final String twoPieceBonus;
+  final String oneSetEffect;
   @override
-  final String fourPieceBonus;
+  final String twoSetEffect;
+  @override
+  final String fourSetEffect;
 
   factory _$UpdateCharacterRequestArtifactSetInner(
           [void Function(UpdateCharacterRequestArtifactSetInnerBuilder)?
@@ -35,8 +37,9 @@ class _$UpdateCharacterRequestArtifactSetInner
       required this.description,
       required this.iconUrl,
       required this.rarity,
-      required this.twoPieceBonus,
-      required this.fourPieceBonus})
+      required this.oneSetEffect,
+      required this.twoSetEffect,
+      required this.fourSetEffect})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         id, r'UpdateCharacterRequestArtifactSetInner', 'id');
@@ -48,10 +51,12 @@ class _$UpdateCharacterRequestArtifactSetInner
         iconUrl, r'UpdateCharacterRequestArtifactSetInner', 'iconUrl');
     BuiltValueNullFieldError.checkNotNull(
         rarity, r'UpdateCharacterRequestArtifactSetInner', 'rarity');
-    BuiltValueNullFieldError.checkNotNull(twoPieceBonus,
-        r'UpdateCharacterRequestArtifactSetInner', 'twoPieceBonus');
-    BuiltValueNullFieldError.checkNotNull(fourPieceBonus,
-        r'UpdateCharacterRequestArtifactSetInner', 'fourPieceBonus');
+    BuiltValueNullFieldError.checkNotNull(oneSetEffect,
+        r'UpdateCharacterRequestArtifactSetInner', 'oneSetEffect');
+    BuiltValueNullFieldError.checkNotNull(twoSetEffect,
+        r'UpdateCharacterRequestArtifactSetInner', 'twoSetEffect');
+    BuiltValueNullFieldError.checkNotNull(fourSetEffect,
+        r'UpdateCharacterRequestArtifactSetInner', 'fourSetEffect');
   }
 
   @override
@@ -73,8 +78,9 @@ class _$UpdateCharacterRequestArtifactSetInner
         description == other.description &&
         iconUrl == other.iconUrl &&
         rarity == other.rarity &&
-        twoPieceBonus == other.twoPieceBonus &&
-        fourPieceBonus == other.fourPieceBonus;
+        oneSetEffect == other.oneSetEffect &&
+        twoSetEffect == other.twoSetEffect &&
+        fourSetEffect == other.fourSetEffect;
   }
 
   @override
@@ -85,8 +91,9 @@ class _$UpdateCharacterRequestArtifactSetInner
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, iconUrl.hashCode);
     _$hash = $jc(_$hash, rarity.hashCode);
-    _$hash = $jc(_$hash, twoPieceBonus.hashCode);
-    _$hash = $jc(_$hash, fourPieceBonus.hashCode);
+    _$hash = $jc(_$hash, oneSetEffect.hashCode);
+    _$hash = $jc(_$hash, twoSetEffect.hashCode);
+    _$hash = $jc(_$hash, fourSetEffect.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -100,8 +107,9 @@ class _$UpdateCharacterRequestArtifactSetInner
           ..add('description', description)
           ..add('iconUrl', iconUrl)
           ..add('rarity', rarity)
-          ..add('twoPieceBonus', twoPieceBonus)
-          ..add('fourPieceBonus', fourPieceBonus))
+          ..add('oneSetEffect', oneSetEffect)
+          ..add('twoSetEffect', twoSetEffect)
+          ..add('fourSetEffect', fourSetEffect))
         .toString();
   }
 }
@@ -132,15 +140,18 @@ class UpdateCharacterRequestArtifactSetInnerBuilder
   int? get rarity => _$this._rarity;
   set rarity(int? rarity) => _$this._rarity = rarity;
 
-  String? _twoPieceBonus;
-  String? get twoPieceBonus => _$this._twoPieceBonus;
-  set twoPieceBonus(String? twoPieceBonus) =>
-      _$this._twoPieceBonus = twoPieceBonus;
+  String? _oneSetEffect;
+  String? get oneSetEffect => _$this._oneSetEffect;
+  set oneSetEffect(String? oneSetEffect) => _$this._oneSetEffect = oneSetEffect;
 
-  String? _fourPieceBonus;
-  String? get fourPieceBonus => _$this._fourPieceBonus;
-  set fourPieceBonus(String? fourPieceBonus) =>
-      _$this._fourPieceBonus = fourPieceBonus;
+  String? _twoSetEffect;
+  String? get twoSetEffect => _$this._twoSetEffect;
+  set twoSetEffect(String? twoSetEffect) => _$this._twoSetEffect = twoSetEffect;
+
+  String? _fourSetEffect;
+  String? get fourSetEffect => _$this._fourSetEffect;
+  set fourSetEffect(String? fourSetEffect) =>
+      _$this._fourSetEffect = fourSetEffect;
 
   UpdateCharacterRequestArtifactSetInnerBuilder() {
     UpdateCharacterRequestArtifactSetInner._defaults(this);
@@ -154,8 +165,9 @@ class UpdateCharacterRequestArtifactSetInnerBuilder
       _description = $v.description;
       _iconUrl = $v.iconUrl;
       _rarity = $v.rarity;
-      _twoPieceBonus = $v.twoPieceBonus;
-      _fourPieceBonus = $v.fourPieceBonus;
+      _oneSetEffect = $v.oneSetEffect;
+      _twoSetEffect = $v.twoSetEffect;
+      _fourSetEffect = $v.fourSetEffect;
       _$v = null;
     }
     return this;
@@ -189,12 +201,12 @@ class UpdateCharacterRequestArtifactSetInnerBuilder
                 iconUrl, r'UpdateCharacterRequestArtifactSetInner', 'iconUrl'),
             rarity: BuiltValueNullFieldError.checkNotNull(
                 rarity, r'UpdateCharacterRequestArtifactSetInner', 'rarity'),
-            twoPieceBonus: BuiltValueNullFieldError.checkNotNull(
-                twoPieceBonus, r'UpdateCharacterRequestArtifactSetInner', 'twoPieceBonus'),
-            fourPieceBonus: BuiltValueNullFieldError.checkNotNull(
-                fourPieceBonus,
-                r'UpdateCharacterRequestArtifactSetInner',
-                'fourPieceBonus'));
+            oneSetEffect: BuiltValueNullFieldError.checkNotNull(
+                oneSetEffect, r'UpdateCharacterRequestArtifactSetInner', 'oneSetEffect'),
+            twoSetEffect: BuiltValueNullFieldError.checkNotNull(
+                twoSetEffect, r'UpdateCharacterRequestArtifactSetInner', 'twoSetEffect'),
+            fourSetEffect:
+                BuiltValueNullFieldError.checkNotNull(fourSetEffect, r'UpdateCharacterRequestArtifactSetInner', 'fourSetEffect'));
     replace(_$result);
     return _$result;
   }

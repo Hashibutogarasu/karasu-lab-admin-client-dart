@@ -1,17 +1,12 @@
 import 'package:test/test.dart';
 import 'package:karasu_lab_admin_client/karasu_lab_admin_client.dart';
 
-// tests for UpdateCharacterRequestWeaponVersion
+// tests for VersionsControllerCreateRequest
 void main() {
-  final instance = UpdateCharacterRequestWeaponVersionBuilder();
+  final instance = VersionsControllerCreateRequestBuilder();
   // TODO add properties to the builder and call build()
 
-  group(UpdateCharacterRequestWeaponVersion, () {
-    // String id
-    test('to test the property `id`', () async {
-      // TODO
-    });
-
+  group(VersionsControllerCreateRequest, () {
     // String name
     test('to test the property `name`', () async {
       // TODO
@@ -34,16 +29,6 @@ void main() {
 
     // BuiltList<UpdateCharacterRequestWeaponVersionRegionsInner> regions
     test('to test the property `regions`', () async {
-      // TODO
-    });
-
-    // String createdAt
-    test('to test the property `createdAt`', () async {
-      // TODO
-    });
-
-    // String updatedAt
-    test('to test the property `updatedAt`', () async {
       // TODO
     });
 

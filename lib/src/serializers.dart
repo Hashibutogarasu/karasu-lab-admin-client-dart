@@ -24,6 +24,7 @@ import 'package:karasu_lab_admin_client/src/model/admin_auth_controller_signin_c
 import 'package:karasu_lab_admin_client/src/model/admin_auth_controller_signin_request.dart';
 import 'package:karasu_lab_admin_client/src/model/admin_auth_controller_signup_request.dart';
 import 'package:karasu_lab_admin_client/src/model/artifact_sets.dart';
+import 'package:karasu_lab_admin_client/src/model/artifact_sets_controller_update_request.dart';
 import 'package:karasu_lab_admin_client/src/model/artifacts.dart';
 import 'package:karasu_lab_admin_client/src/model/characters_controller_import_from_hoyo_lab_query_parameter.dart';
 import 'package:karasu_lab_admin_client/src/model/characters_controller_import_request.dart';
@@ -57,6 +58,7 @@ import 'package:karasu_lab_admin_client/src/model/hi3_characters_controller_upda
 import 'package:karasu_lab_admin_client/src/model/hi3_characters_controller_update_request_skills_inner.dart';
 import 'package:karasu_lab_admin_client/src/model/hi3_characters_controller_update_request_stigmatas_inner.dart';
 import 'package:karasu_lab_admin_client/src/model/hi3_characters_controller_update_request_weapons_inner.dart';
+import 'package:karasu_lab_admin_client/src/model/regions_controller_update_request.dart';
 import 'package:karasu_lab_admin_client/src/model/update_character_request.dart';
 import 'package:karasu_lab_admin_client/src/model/update_character_request_artifact_set_inner.dart';
 import 'package:karasu_lab_admin_client/src/model/update_character_request_galleries_inner.dart';
@@ -64,8 +66,13 @@ import 'package:karasu_lab_admin_client/src/model/update_character_request_regio
 import 'package:karasu_lab_admin_client/src/model/update_character_request_version.dart';
 import 'package:karasu_lab_admin_client/src/model/update_character_request_weapon.dart';
 import 'package:karasu_lab_admin_client/src/model/update_character_request_weapon_version.dart';
+import 'package:karasu_lab_admin_client/src/model/update_character_request_weapon_version_artifact_sets_inner.dart';
+import 'package:karasu_lab_admin_client/src/model/update_character_request_weapon_version_regions_inner.dart';
+import 'package:karasu_lab_admin_client/src/model/versions_controller_create_request.dart';
+import 'package:karasu_lab_admin_client/src/model/versions_controller_update_request.dart';
 import 'package:karasu_lab_admin_client/src/model/versions_entity.dart';
 import 'package:karasu_lab_admin_client/src/model/weapon.dart';
+import 'package:karasu_lab_admin_client/src/model/weapons_controller_update_request.dart';
 
 part 'serializers.g.dart';
 
@@ -80,6 +87,7 @@ part 'serializers.g.dart';
   AdminAuthControllerSigninRequest,
   AdminAuthControllerSignupRequest,
   ArtifactSets,
+  ArtifactSetsControllerUpdateRequest,
   Artifacts,
   CharactersControllerImportFromHoyoLabQueryParameter,
   CharactersControllerImportRequest,
@@ -113,6 +121,7 @@ part 'serializers.g.dart';
   Hi3CharactersControllerUpdateRequestSkillsInner,
   Hi3CharactersControllerUpdateRequestStigmatasInner,
   Hi3CharactersControllerUpdateRequestWeaponsInner,
+  RegionsControllerUpdateRequest,
   UpdateCharacterRequest,
   UpdateCharacterRequestArtifactSetInner,
   UpdateCharacterRequestGalleriesInner,
@@ -120,8 +129,13 @@ part 'serializers.g.dart';
   UpdateCharacterRequestVersion,
   UpdateCharacterRequestWeapon,
   UpdateCharacterRequestWeaponVersion,
+  UpdateCharacterRequestWeaponVersionArtifactSetsInner,
+  UpdateCharacterRequestWeaponVersionRegionsInner,
+  VersionsControllerCreateRequest,
+  VersionsControllerUpdateRequest,
   VersionsEntity,
   Weapon,
+  WeaponsControllerUpdateRequest,
 ])
 Serializers serializers = (_$serializers.toBuilder()
       ..add(const OneOfSerializer())

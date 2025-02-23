@@ -1,12 +1,12 @@
 import 'package:test/test.dart';
 import 'package:karasu_lab_admin_client/karasu_lab_admin_client.dart';
 
-// tests for UpdateCharacterRequestArtifactSetInner
+// tests for ArtifactSetsControllerUpdateRequest
 void main() {
-  final instance = UpdateCharacterRequestArtifactSetInnerBuilder();
+  final instance = ArtifactSetsControllerUpdateRequestBuilder();
   // TODO add properties to the builder and call build()
 
-  group(UpdateCharacterRequestArtifactSetInner, () {
+  group(ArtifactSetsControllerUpdateRequest, () {
     // String id
     test('to test the property `id`', () async {
       // TODO

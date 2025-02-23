@@ -9,24 +9,18 @@ import 'package:karasu_lab_admin_client/src/model/update_character_request_weapo
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'update_character_request_weapon_version.g.dart';
+part 'versions_controller_create_request.g.dart';
 
-/// UpdateCharacterRequestWeaponVersion
+/// VersionsControllerCreateRequest
 ///
 /// Properties:
-/// * [id] 
 /// * [name] 
 /// * [versionString] 
 /// * [released] 
 /// * [artifactSets] 
 /// * [regions] 
-/// * [createdAt] 
-/// * [updatedAt] 
 @BuiltValue()
-abstract class UpdateCharacterRequestWeaponVersion implements Built<UpdateCharacterRequestWeaponVersion, UpdateCharacterRequestWeaponVersionBuilder> {
-  @BuiltValueField(wireName: r'id')
-  String get id;
-
+abstract class VersionsControllerCreateRequest implements Built<VersionsControllerCreateRequest, VersionsControllerCreateRequestBuilder> {
   @BuiltValueField(wireName: r'name')
   String get name;
 
@@ -42,40 +36,29 @@ abstract class UpdateCharacterRequestWeaponVersion implements Built<UpdateCharac
   @BuiltValueField(wireName: r'regions')
   BuiltList<UpdateCharacterRequestWeaponVersionRegionsInner>? get regions;
 
-  @BuiltValueField(wireName: r'createdAt')
-  String get createdAt;
+  VersionsControllerCreateRequest._();
 
-  @BuiltValueField(wireName: r'updatedAt')
-  String get updatedAt;
-
-  UpdateCharacterRequestWeaponVersion._();
-
-  factory UpdateCharacterRequestWeaponVersion([void updates(UpdateCharacterRequestWeaponVersionBuilder b)]) = _$UpdateCharacterRequestWeaponVersion;
+  factory VersionsControllerCreateRequest([void updates(VersionsControllerCreateRequestBuilder b)]) = _$VersionsControllerCreateRequest;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(UpdateCharacterRequestWeaponVersionBuilder b) => b;
+  static void _defaults(VersionsControllerCreateRequestBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<UpdateCharacterRequestWeaponVersion> get serializer => _$UpdateCharacterRequestWeaponVersionSerializer();
+  static Serializer<VersionsControllerCreateRequest> get serializer => _$VersionsControllerCreateRequestSerializer();
 }
 
-class _$UpdateCharacterRequestWeaponVersionSerializer implements PrimitiveSerializer<UpdateCharacterRequestWeaponVersion> {
+class _$VersionsControllerCreateRequestSerializer implements PrimitiveSerializer<VersionsControllerCreateRequest> {
   @override
-  final Iterable<Type> types = const [UpdateCharacterRequestWeaponVersion, _$UpdateCharacterRequestWeaponVersion];
+  final Iterable<Type> types = const [VersionsControllerCreateRequest, _$VersionsControllerCreateRequest];
 
   @override
-  final String wireName = r'UpdateCharacterRequestWeaponVersion';
+  final String wireName = r'VersionsControllerCreateRequest';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    UpdateCharacterRequestWeaponVersion object, {
+    VersionsControllerCreateRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'id';
-    yield serializers.serialize(
-      object.id,
-      specifiedType: const FullType(String),
-    );
     yield r'name';
     yield serializers.serialize(
       object.name,
@@ -105,22 +88,12 @@ class _$UpdateCharacterRequestWeaponVersionSerializer implements PrimitiveSerial
         specifiedType: const FullType.nullable(BuiltList, [FullType(UpdateCharacterRequestWeaponVersionRegionsInner)]),
       );
     }
-    yield r'createdAt';
-    yield serializers.serialize(
-      object.createdAt,
-      specifiedType: const FullType(String),
-    );
-    yield r'updatedAt';
-    yield serializers.serialize(
-      object.updatedAt,
-      specifiedType: const FullType(String),
-    );
   }
 
   @override
   Object serialize(
     Serializers serializers,
-    UpdateCharacterRequestWeaponVersion object, {
+    VersionsControllerCreateRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -131,20 +104,13 @@ class _$UpdateCharacterRequestWeaponVersionSerializer implements PrimitiveSerial
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required UpdateCharacterRequestWeaponVersionBuilder result,
+    required VersionsControllerCreateRequestBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'id':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.id = valueDes;
-          break;
         case r'name':
           final valueDes = serializers.deserialize(
             value,
@@ -182,20 +148,6 @@ class _$UpdateCharacterRequestWeaponVersionSerializer implements PrimitiveSerial
           if (valueDes == null) continue;
           result.regions.replace(valueDes);
           break;
-        case r'createdAt':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.createdAt = valueDes;
-          break;
-        case r'updatedAt':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.updatedAt = valueDes;
-          break;
         default:
           unhandled.add(key);
           unhandled.add(value);
@@ -205,12 +157,12 @@ class _$UpdateCharacterRequestWeaponVersionSerializer implements PrimitiveSerial
   }
 
   @override
-  UpdateCharacterRequestWeaponVersion deserialize(
+  VersionsControllerCreateRequest deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = UpdateCharacterRequestWeaponVersionBuilder();
+    final result = VersionsControllerCreateRequestBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

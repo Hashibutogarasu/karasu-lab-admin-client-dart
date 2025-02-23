@@ -18,6 +18,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(AdminAuthControllerSigninRequest.serializer)
       ..add(AdminAuthControllerSignupRequest.serializer)
       ..add(ArtifactSets.serializer)
+      ..add(ArtifactSetsControllerUpdateRequest.serializer)
       ..add(Artifacts.serializer)
       ..add(CharactersControllerImportFromHoyoLabQueryParameter.serializer)
       ..add(CharactersControllerImportRequest.serializer)
@@ -56,6 +57,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(Hi3CharactersControllerUpdateRequestSkillsInner.serializer)
       ..add(Hi3CharactersControllerUpdateRequestStigmatasInner.serializer)
       ..add(Hi3CharactersControllerUpdateRequestWeaponsInner.serializer)
+      ..add(RegionsControllerUpdateRequest.serializer)
       ..add(UpdateCharacterRequest.serializer)
       ..add(UpdateCharacterRequestArtifactSetInner.serializer)
       ..add(UpdateCharacterRequestGalleriesInner.serializer)
@@ -63,8 +65,13 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(UpdateCharacterRequestVersion.serializer)
       ..add(UpdateCharacterRequestWeapon.serializer)
       ..add(UpdateCharacterRequestWeaponVersion.serializer)
+      ..add(UpdateCharacterRequestWeaponVersionArtifactSetsInner.serializer)
+      ..add(UpdateCharacterRequestWeaponVersionRegionsInner.serializer)
+      ..add(VersionsControllerCreateRequest.serializer)
+      ..add(VersionsControllerUpdateRequest.serializer)
       ..add(VersionsEntity.serializer)
       ..add(Weapon.serializer)
+      ..add(WeaponsControllerUpdateRequest.serializer)
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(ArtifactSets)]),
           () => new ListBuilder<ArtifactSets>())
@@ -148,11 +155,41 @@ Serializers _$serializers = (new Serializers().toBuilder()
           () => new ListBuilder<
               CharactersControllerImportRequestFilterValuesCharacterPropertyValueTypesInner>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>())
+          const FullType(BuiltList, const [
+            const FullType(UpdateCharacterRequestWeaponVersionArtifactSetsInner)
+          ]),
+          () => new ListBuilder<
+              UpdateCharacterRequestWeaponVersionArtifactSetsInner>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>())
+          const FullType(BuiltList, const [
+            const FullType(UpdateCharacterRequestWeaponVersionRegionsInner)
+          ]),
+          () => new ListBuilder<
+              UpdateCharacterRequestWeaponVersionRegionsInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(UpdateCharacterRequestWeaponVersionArtifactSetsInner)
+          ]),
+          () => new ListBuilder<
+              UpdateCharacterRequestWeaponVersionArtifactSetsInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(UpdateCharacterRequestWeaponVersionRegionsInner)
+          ]),
+          () => new ListBuilder<
+              UpdateCharacterRequestWeaponVersionRegionsInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(UpdateCharacterRequestWeaponVersionArtifactSetsInner)
+          ]),
+          () => new ListBuilder<
+              UpdateCharacterRequestWeaponVersionArtifactSetsInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(UpdateCharacterRequestWeaponVersionRegionsInner)
+          ]),
+          () => new ListBuilder<
+              UpdateCharacterRequestWeaponVersionRegionsInner>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType.nullable(

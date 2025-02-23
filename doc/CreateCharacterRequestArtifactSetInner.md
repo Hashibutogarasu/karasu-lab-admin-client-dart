@@ -12,8 +12,9 @@ Name | Type | Description | Notes
 **description** | **String** |  | 
 **iconUrl** | **String** |  | 
 **rarity** | **int** |  | 
-**twoPieceBonus** | **String** |  | 
-**fourPieceBonus** | **String** |  | 
+**oneSetEffect** | **String** |  | 
+**twoSetEffect** | **String** |  | 
+**fourSetEffect** | **String** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

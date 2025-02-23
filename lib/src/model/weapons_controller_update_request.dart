@@ -3,12 +3,13 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:karasu_lab_admin_client/src/model/update_character_request_weapon_version.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'update_character_request_artifact_set_inner.g.dart';
+part 'weapons_controller_update_request.g.dart';
 
-/// UpdateCharacterRequestArtifactSetInner
+/// WeaponsControllerUpdateRequest
 ///
 /// Properties:
 /// * [id] 
@@ -16,11 +17,11 @@ part 'update_character_request_artifact_set_inner.g.dart';
 /// * [description] 
 /// * [iconUrl] 
 /// * [rarity] 
-/// * [oneSetEffect] 
-/// * [twoSetEffect] 
-/// * [fourSetEffect] 
+/// * [effect] 
+/// * [type] 
+/// * [version] 
 @BuiltValue()
-abstract class UpdateCharacterRequestArtifactSetInner implements Built<UpdateCharacterRequestArtifactSetInner, UpdateCharacterRequestArtifactSetInnerBuilder> {
+abstract class WeaponsControllerUpdateRequest implements Built<WeaponsControllerUpdateRequest, WeaponsControllerUpdateRequestBuilder> {
   @BuiltValueField(wireName: r'id')
   String get id;
 
@@ -28,7 +29,7 @@ abstract class UpdateCharacterRequestArtifactSetInner implements Built<UpdateCha
   String get name;
 
   @BuiltValueField(wireName: r'description')
-  String get description;
+  String? get description;
 
   @BuiltValueField(wireName: r'icon_url')
   String get iconUrl;
@@ -36,36 +37,36 @@ abstract class UpdateCharacterRequestArtifactSetInner implements Built<UpdateCha
   @BuiltValueField(wireName: r'rarity')
   int get rarity;
 
-  @BuiltValueField(wireName: r'one_set_effect')
-  String get oneSetEffect;
+  @BuiltValueField(wireName: r'effect')
+  String get effect;
 
-  @BuiltValueField(wireName: r'two_set_effect')
-  String get twoSetEffect;
+  @BuiltValueField(wireName: r'type')
+  String get type;
 
-  @BuiltValueField(wireName: r'four_set_effect')
-  String get fourSetEffect;
+  @BuiltValueField(wireName: r'version')
+  UpdateCharacterRequestWeaponVersion get version;
 
-  UpdateCharacterRequestArtifactSetInner._();
+  WeaponsControllerUpdateRequest._();
 
-  factory UpdateCharacterRequestArtifactSetInner([void updates(UpdateCharacterRequestArtifactSetInnerBuilder b)]) = _$UpdateCharacterRequestArtifactSetInner;
+  factory WeaponsControllerUpdateRequest([void updates(WeaponsControllerUpdateRequestBuilder b)]) = _$WeaponsControllerUpdateRequest;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(UpdateCharacterRequestArtifactSetInnerBuilder b) => b;
+  static void _defaults(WeaponsControllerUpdateRequestBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<UpdateCharacterRequestArtifactSetInner> get serializer => _$UpdateCharacterRequestArtifactSetInnerSerializer();
+  static Serializer<WeaponsControllerUpdateRequest> get serializer => _$WeaponsControllerUpdateRequestSerializer();
 }
 
-class _$UpdateCharacterRequestArtifactSetInnerSerializer implements PrimitiveSerializer<UpdateCharacterRequestArtifactSetInner> {
+class _$WeaponsControllerUpdateRequestSerializer implements PrimitiveSerializer<WeaponsControllerUpdateRequest> {
   @override
-  final Iterable<Type> types = const [UpdateCharacterRequestArtifactSetInner, _$UpdateCharacterRequestArtifactSetInner];
+  final Iterable<Type> types = const [WeaponsControllerUpdateRequest, _$WeaponsControllerUpdateRequest];
 
   @override
-  final String wireName = r'UpdateCharacterRequestArtifactSetInner';
+  final String wireName = r'WeaponsControllerUpdateRequest';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    UpdateCharacterRequestArtifactSetInner object, {
+    WeaponsControllerUpdateRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     yield r'id';
@@ -78,11 +79,13 @@ class _$UpdateCharacterRequestArtifactSetInnerSerializer implements PrimitiveSer
       object.name,
       specifiedType: const FullType(String),
     );
-    yield r'description';
-    yield serializers.serialize(
-      object.description,
-      specifiedType: const FullType(String),
-    );
+    if (object.description != null) {
+      yield r'description';
+      yield serializers.serialize(
+        object.description,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
     yield r'icon_url';
     yield serializers.serialize(
       object.iconUrl,
@@ -93,27 +96,27 @@ class _$UpdateCharacterRequestArtifactSetInnerSerializer implements PrimitiveSer
       object.rarity,
       specifiedType: const FullType(int),
     );
-    yield r'one_set_effect';
+    yield r'effect';
     yield serializers.serialize(
-      object.oneSetEffect,
+      object.effect,
       specifiedType: const FullType(String),
     );
-    yield r'two_set_effect';
+    yield r'type';
     yield serializers.serialize(
-      object.twoSetEffect,
+      object.type,
       specifiedType: const FullType(String),
     );
-    yield r'four_set_effect';
+    yield r'version';
     yield serializers.serialize(
-      object.fourSetEffect,
-      specifiedType: const FullType(String),
+      object.version,
+      specifiedType: const FullType(UpdateCharacterRequestWeaponVersion),
     );
   }
 
   @override
   Object serialize(
     Serializers serializers,
-    UpdateCharacterRequestArtifactSetInner object, {
+    WeaponsControllerUpdateRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -124,7 +127,7 @@ class _$UpdateCharacterRequestArtifactSetInnerSerializer implements PrimitiveSer
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required UpdateCharacterRequestArtifactSetInnerBuilder result,
+    required WeaponsControllerUpdateRequestBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -148,8 +151,9 @@ class _$UpdateCharacterRequestArtifactSetInnerSerializer implements PrimitiveSer
         case r'description':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
           result.description = valueDes;
           break;
         case r'icon_url':
@@ -166,26 +170,26 @@ class _$UpdateCharacterRequestArtifactSetInnerSerializer implements PrimitiveSer
           ) as int;
           result.rarity = valueDes;
           break;
-        case r'one_set_effect':
+        case r'effect':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.oneSetEffect = valueDes;
+          result.effect = valueDes;
           break;
-        case r'two_set_effect':
+        case r'type':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.twoSetEffect = valueDes;
+          result.type = valueDes;
           break;
-        case r'four_set_effect':
+        case r'version':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.fourSetEffect = valueDes;
+            specifiedType: const FullType(UpdateCharacterRequestWeaponVersion),
+          ) as UpdateCharacterRequestWeaponVersion;
+          result.version.replace(valueDes);
           break;
         default:
           unhandled.add(key);
@@ -196,12 +200,12 @@ class _$UpdateCharacterRequestArtifactSetInnerSerializer implements PrimitiveSer
   }
 
   @override
-  UpdateCharacterRequestArtifactSetInner deserialize(
+  WeaponsControllerUpdateRequest deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = UpdateCharacterRequestArtifactSetInnerBuilder();
+    final result = WeaponsControllerUpdateRequestBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

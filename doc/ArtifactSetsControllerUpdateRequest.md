@@ -1,4 +1,4 @@
-# karasu_lab_admin_client.model.UpdateCharacterRequestArtifactSetInner
+# karasu_lab_admin_client.model.ArtifactSetsControllerUpdateRequest
 
 ## Load the model package
 ```dart

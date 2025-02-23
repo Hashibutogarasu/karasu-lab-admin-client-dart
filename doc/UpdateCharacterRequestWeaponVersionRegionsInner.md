@@ -1,4 +1,4 @@
-# karasu_lab_admin_client.model.UpdateCharacterRequestArtifactSetInner
+# karasu_lab_admin_client.model.UpdateCharacterRequestWeaponVersionRegionsInner
 
 ## Load the model package
 ```dart
@@ -10,12 +10,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | 
 **name** | **String** |  | 
-**description** | **String** |  | 
+**description** | **String** |  | [optional] 
 **iconUrl** | **String** |  | 
-**rarity** | **int** |  | 
-**oneSetEffect** | **String** |  | 
-**twoSetEffect** | **String** |  | 
-**fourSetEffect** | **String** |  | 
+**createdAt** | **String** |  | 
+**updatedAt** | **String** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
