@@ -14,7 +14,7 @@ class _$UpdateCharacterRequestRegion extends UpdateCharacterRequestRegion {
   @override
   final String? description;
   @override
-  final String iconUrl;
+  final String? thumbnailUrl;
 
   factory _$UpdateCharacterRequestRegion(
           [void Function(UpdateCharacterRequestRegionBuilder)? updates]) =>
@@ -24,14 +24,12 @@ class _$UpdateCharacterRequestRegion extends UpdateCharacterRequestRegion {
       {required this.id,
       required this.name,
       this.description,
-      required this.iconUrl})
+      this.thumbnailUrl})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         id, r'UpdateCharacterRequestRegion', 'id');
     BuiltValueNullFieldError.checkNotNull(
         name, r'UpdateCharacterRequestRegion', 'name');
-    BuiltValueNullFieldError.checkNotNull(
-        iconUrl, r'UpdateCharacterRequestRegion', 'iconUrl');
   }
 
   @override
@@ -50,7 +48,7 @@ class _$UpdateCharacterRequestRegion extends UpdateCharacterRequestRegion {
         id == other.id &&
         name == other.name &&
         description == other.description &&
-        iconUrl == other.iconUrl;
+        thumbnailUrl == other.thumbnailUrl;
   }
 
   @override
@@ -59,7 +57,7 @@ class _$UpdateCharacterRequestRegion extends UpdateCharacterRequestRegion {
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, description.hashCode);
-    _$hash = $jc(_$hash, iconUrl.hashCode);
+    _$hash = $jc(_$hash, thumbnailUrl.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -70,7 +68,7 @@ class _$UpdateCharacterRequestRegion extends UpdateCharacterRequestRegion {
           ..add('id', id)
           ..add('name', name)
           ..add('description', description)
-          ..add('iconUrl', iconUrl))
+          ..add('thumbnailUrl', thumbnailUrl))
         .toString();
   }
 }
@@ -93,9 +91,9 @@ class UpdateCharacterRequestRegionBuilder
   String? get description => _$this._description;
   set description(String? description) => _$this._description = description;
 
-  String? _iconUrl;
-  String? get iconUrl => _$this._iconUrl;
-  set iconUrl(String? iconUrl) => _$this._iconUrl = iconUrl;
+  String? _thumbnailUrl;
+  String? get thumbnailUrl => _$this._thumbnailUrl;
+  set thumbnailUrl(String? thumbnailUrl) => _$this._thumbnailUrl = thumbnailUrl;
 
   UpdateCharacterRequestRegionBuilder() {
     UpdateCharacterRequestRegion._defaults(this);
@@ -107,7 +105,7 @@ class UpdateCharacterRequestRegionBuilder
       _id = $v.id;
       _name = $v.name;
       _description = $v.description;
-      _iconUrl = $v.iconUrl;
+      _thumbnailUrl = $v.thumbnailUrl;
       _$v = null;
     }
     return this;
@@ -135,8 +133,7 @@ class UpdateCharacterRequestRegionBuilder
             name: BuiltValueNullFieldError.checkNotNull(
                 name, r'UpdateCharacterRequestRegion', 'name'),
             description: description,
-            iconUrl: BuiltValueNullFieldError.checkNotNull(
-                iconUrl, r'UpdateCharacterRequestRegion', 'iconUrl'));
+            thumbnailUrl: thumbnailUrl);
     replace(_$result);
     return _$result;
   }

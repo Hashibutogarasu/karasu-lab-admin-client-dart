@@ -14,7 +14,7 @@ part 'regions_controller_update_request.g.dart';
 /// * [id] 
 /// * [name] 
 /// * [description] 
-/// * [iconUrl] 
+/// * [thumbnailUrl] 
 @BuiltValue()
 abstract class RegionsControllerUpdateRequest implements Built<RegionsControllerUpdateRequest, RegionsControllerUpdateRequestBuilder> {
   @BuiltValueField(wireName: r'id')
@@ -26,8 +26,8 @@ abstract class RegionsControllerUpdateRequest implements Built<RegionsController
   @BuiltValueField(wireName: r'description')
   String? get description;
 
-  @BuiltValueField(wireName: r'icon_url')
-  String get iconUrl;
+  @BuiltValueField(wireName: r'thumbnail_url')
+  String? get thumbnailUrl;
 
   RegionsControllerUpdateRequest._();
 
@@ -69,11 +69,13 @@ class _$RegionsControllerUpdateRequestSerializer implements PrimitiveSerializer<
         specifiedType: const FullType.nullable(String),
       );
     }
-    yield r'icon_url';
-    yield serializers.serialize(
-      object.iconUrl,
-      specifiedType: const FullType(String),
-    );
+    if (object.thumbnailUrl != null) {
+      yield r'thumbnail_url';
+      yield serializers.serialize(
+        object.thumbnailUrl,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
   }
 
   @override
@@ -119,12 +121,13 @@ class _$RegionsControllerUpdateRequestSerializer implements PrimitiveSerializer<
           if (valueDes == null) continue;
           result.description = valueDes;
           break;
-        case r'icon_url':
+        case r'thumbnail_url':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.iconUrl = valueDes;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.thumbnailUrl = valueDes;
           break;
         default:
           unhandled.add(key);

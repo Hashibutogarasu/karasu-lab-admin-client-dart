@@ -12,19 +12,17 @@ class _$CreateCharacterRequestRegion extends CreateCharacterRequestRegion {
   @override
   final String? description;
   @override
-  final String iconUrl;
+  final String? thumbnailUrl;
 
   factory _$CreateCharacterRequestRegion(
           [void Function(CreateCharacterRequestRegionBuilder)? updates]) =>
       (new CreateCharacterRequestRegionBuilder()..update(updates))._build();
 
   _$CreateCharacterRequestRegion._(
-      {required this.name, this.description, required this.iconUrl})
+      {required this.name, this.description, this.thumbnailUrl})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         name, r'CreateCharacterRequestRegion', 'name');
-    BuiltValueNullFieldError.checkNotNull(
-        iconUrl, r'CreateCharacterRequestRegion', 'iconUrl');
   }
 
   @override
@@ -42,7 +40,7 @@ class _$CreateCharacterRequestRegion extends CreateCharacterRequestRegion {
     return other is CreateCharacterRequestRegion &&
         name == other.name &&
         description == other.description &&
-        iconUrl == other.iconUrl;
+        thumbnailUrl == other.thumbnailUrl;
   }
 
   @override
@@ -50,7 +48,7 @@ class _$CreateCharacterRequestRegion extends CreateCharacterRequestRegion {
     var _$hash = 0;
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, description.hashCode);
-    _$hash = $jc(_$hash, iconUrl.hashCode);
+    _$hash = $jc(_$hash, thumbnailUrl.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -60,7 +58,7 @@ class _$CreateCharacterRequestRegion extends CreateCharacterRequestRegion {
     return (newBuiltValueToStringHelper(r'CreateCharacterRequestRegion')
           ..add('name', name)
           ..add('description', description)
-          ..add('iconUrl', iconUrl))
+          ..add('thumbnailUrl', thumbnailUrl))
         .toString();
   }
 }
@@ -79,9 +77,9 @@ class CreateCharacterRequestRegionBuilder
   String? get description => _$this._description;
   set description(String? description) => _$this._description = description;
 
-  String? _iconUrl;
-  String? get iconUrl => _$this._iconUrl;
-  set iconUrl(String? iconUrl) => _$this._iconUrl = iconUrl;
+  String? _thumbnailUrl;
+  String? get thumbnailUrl => _$this._thumbnailUrl;
+  set thumbnailUrl(String? thumbnailUrl) => _$this._thumbnailUrl = thumbnailUrl;
 
   CreateCharacterRequestRegionBuilder() {
     CreateCharacterRequestRegion._defaults(this);
@@ -92,7 +90,7 @@ class CreateCharacterRequestRegionBuilder
     if ($v != null) {
       _name = $v.name;
       _description = $v.description;
-      _iconUrl = $v.iconUrl;
+      _thumbnailUrl = $v.thumbnailUrl;
       _$v = null;
     }
     return this;
@@ -118,8 +116,7 @@ class CreateCharacterRequestRegionBuilder
             name: BuiltValueNullFieldError.checkNotNull(
                 name, r'CreateCharacterRequestRegion', 'name'),
             description: description,
-            iconUrl: BuiltValueNullFieldError.checkNotNull(
-                iconUrl, r'CreateCharacterRequestRegion', 'iconUrl'));
+            thumbnailUrl: thumbnailUrl);
     replace(_$result);
     return _$result;
   }

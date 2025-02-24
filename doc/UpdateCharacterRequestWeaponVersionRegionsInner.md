@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **id** | **String** |  | 
 **name** | **String** |  | 
 **description** | **String** |  | [optional] 
-**iconUrl** | **String** |  | 
+**thumbnailUrl** | **String** |  | [optional] 
 **createdAt** | **String** |  | 
 **updatedAt** | **String** |  | 
 

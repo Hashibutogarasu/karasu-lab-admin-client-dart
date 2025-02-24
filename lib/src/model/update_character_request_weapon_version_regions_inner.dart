@@ -14,7 +14,7 @@ part 'update_character_request_weapon_version_regions_inner.g.dart';
 /// * [id] 
 /// * [name] 
 /// * [description] 
-/// * [iconUrl] 
+/// * [thumbnailUrl] 
 /// * [createdAt] 
 /// * [updatedAt] 
 @BuiltValue()
@@ -28,8 +28,8 @@ abstract class UpdateCharacterRequestWeaponVersionRegionsInner implements Built<
   @BuiltValueField(wireName: r'description')
   String? get description;
 
-  @BuiltValueField(wireName: r'icon_url')
-  String get iconUrl;
+  @BuiltValueField(wireName: r'thumbnail_url')
+  String? get thumbnailUrl;
 
   @BuiltValueField(wireName: r'createdAt')
   String get createdAt;
@@ -77,11 +77,13 @@ class _$UpdateCharacterRequestWeaponVersionRegionsInnerSerializer implements Pri
         specifiedType: const FullType.nullable(String),
       );
     }
-    yield r'icon_url';
-    yield serializers.serialize(
-      object.iconUrl,
-      specifiedType: const FullType(String),
-    );
+    if (object.thumbnailUrl != null) {
+      yield r'thumbnail_url';
+      yield serializers.serialize(
+        object.thumbnailUrl,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
     yield r'createdAt';
     yield serializers.serialize(
       object.createdAt,
@@ -137,12 +139,13 @@ class _$UpdateCharacterRequestWeaponVersionRegionsInnerSerializer implements Pri
           if (valueDes == null) continue;
           result.description = valueDes;
           break;
-        case r'icon_url':
+        case r'thumbnail_url':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.iconUrl = valueDes;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.thumbnailUrl = valueDes;
           break;
         case r'createdAt':
           final valueDes = serializers.deserialize(
