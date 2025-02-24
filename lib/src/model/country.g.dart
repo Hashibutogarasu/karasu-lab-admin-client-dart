@@ -14,7 +14,7 @@ class _$Country extends Country {
   @override
   final String? description;
   @override
-  final String? sumbnailUrl;
+  final String? thumbnailUrl;
   @override
   final DateTime createdAt;
   @override
@@ -31,7 +31,7 @@ class _$Country extends Country {
       {required this.id,
       required this.name,
       this.description,
-      this.sumbnailUrl,
+      this.thumbnailUrl,
       required this.createdAt,
       required this.updatedAt,
       this.characters,
@@ -57,7 +57,7 @@ class _$Country extends Country {
         id == other.id &&
         name == other.name &&
         description == other.description &&
-        sumbnailUrl == other.sumbnailUrl &&
+        thumbnailUrl == other.thumbnailUrl &&
         createdAt == other.createdAt &&
         updatedAt == other.updatedAt &&
         characters == other.characters &&
@@ -70,7 +70,7 @@ class _$Country extends Country {
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, description.hashCode);
-    _$hash = $jc(_$hash, sumbnailUrl.hashCode);
+    _$hash = $jc(_$hash, thumbnailUrl.hashCode);
     _$hash = $jc(_$hash, createdAt.hashCode);
     _$hash = $jc(_$hash, updatedAt.hashCode);
     _$hash = $jc(_$hash, characters.hashCode);
@@ -85,7 +85,7 @@ class _$Country extends Country {
           ..add('id', id)
           ..add('name', name)
           ..add('description', description)
-          ..add('sumbnailUrl', sumbnailUrl)
+          ..add('thumbnailUrl', thumbnailUrl)
           ..add('createdAt', createdAt)
           ..add('updatedAt', updatedAt)
           ..add('characters', characters)
@@ -109,9 +109,9 @@ class CountryBuilder implements Builder<Country, CountryBuilder> {
   String? get description => _$this._description;
   set description(String? description) => _$this._description = description;
 
-  String? _sumbnailUrl;
-  String? get sumbnailUrl => _$this._sumbnailUrl;
-  set sumbnailUrl(String? sumbnailUrl) => _$this._sumbnailUrl = sumbnailUrl;
+  String? _thumbnailUrl;
+  String? get thumbnailUrl => _$this._thumbnailUrl;
+  set thumbnailUrl(String? thumbnailUrl) => _$this._thumbnailUrl = thumbnailUrl;
 
   DateTime? _createdAt;
   DateTime? get createdAt => _$this._createdAt;
@@ -142,7 +142,7 @@ class CountryBuilder implements Builder<Country, CountryBuilder> {
       _id = $v.id;
       _name = $v.name;
       _description = $v.description;
-      _sumbnailUrl = $v.sumbnailUrl;
+      _thumbnailUrl = $v.thumbnailUrl;
       _createdAt = $v.createdAt;
       _updatedAt = $v.updatedAt;
       _characters = $v.characters?.toBuilder();
@@ -175,7 +175,7 @@ class CountryBuilder implements Builder<Country, CountryBuilder> {
               name: BuiltValueNullFieldError.checkNotNull(
                   name, r'Country', 'name'),
               description: description,
-              sumbnailUrl: sumbnailUrl,
+              thumbnailUrl: thumbnailUrl,
               createdAt: BuiltValueNullFieldError.checkNotNull(
                   createdAt, r'Country', 'createdAt'),
               updatedAt: BuiltValueNullFieldError.checkNotNull(

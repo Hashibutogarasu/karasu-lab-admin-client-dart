@@ -17,7 +17,7 @@ part 'country.g.dart';
 /// * [id] 
 /// * [name] 
 /// * [description] 
-/// * [sumbnailUrl] 
+/// * [thumbnailUrl] 
 /// * [createdAt] 
 /// * [updatedAt] 
 /// * [characters] 
@@ -33,8 +33,8 @@ abstract class Country implements Built<Country, CountryBuilder> {
   @BuiltValueField(wireName: r'description')
   String? get description;
 
-  @BuiltValueField(wireName: r'sumbnail_url')
-  String? get sumbnailUrl;
+  @BuiltValueField(wireName: r'thumbnail_url')
+  String? get thumbnailUrl;
 
   @BuiltValueField(wireName: r'createdAt')
   DateTime get createdAt;
@@ -88,10 +88,10 @@ class _$CountrySerializer implements PrimitiveSerializer<Country> {
         specifiedType: const FullType.nullable(String),
       );
     }
-    if (object.sumbnailUrl != null) {
-      yield r'sumbnail_url';
+    if (object.thumbnailUrl != null) {
+      yield r'thumbnail_url';
       yield serializers.serialize(
-        object.sumbnailUrl,
+        object.thumbnailUrl,
         specifiedType: const FullType.nullable(String),
       );
     }
@@ -164,13 +164,13 @@ class _$CountrySerializer implements PrimitiveSerializer<Country> {
           if (valueDes == null) continue;
           result.description = valueDes;
           break;
-        case r'sumbnail_url':
+        case r'thumbnail_url':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType.nullable(String),
           ) as String?;
           if (valueDes == null) continue;
-          result.sumbnailUrl = valueDes;
+          result.thumbnailUrl = valueDes;
           break;
         case r'createdAt':
           final valueDes = serializers.deserialize(

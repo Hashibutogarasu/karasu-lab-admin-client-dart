@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **id** | **String** |  | 
 **name** | **String** |  | 
 **description** | **String** |  | [optional] 
-**sumbnailUrl** | **String** |  | [optional] 
+**thumbnailUrl** | **String** |  | [optional] 
 **createdAt** | [**DateTime**](DateTime.md) |  | 
 **updatedAt** | [**DateTime**](DateTime.md) |  | 
 **characters** | [**BuiltList&lt;GICharacter&gt;**](GICharacter.md) |  | [optional] 
