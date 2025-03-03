@@ -1,0 +1,30 @@
+# karasu_lab_admin_client.model.GameCharactersControllerUpdateRequestOneOf
+
+## Load the model package
+```dart
+import 'package:karasu_lab_admin_client/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** |  | 
+**name** | **String** |  | 
+**rarity** | **num** |  | [optional] 
+**game** | **String** |  | 
+**description** | **String** |  | 
+**birthday** | **String** |  | [optional] 
+**cv** | [**BuiltList&lt;GameCharactersControllerUpdateRequestCvInner&gt;**](GameCharactersControllerUpdateRequestCvInner.md) |  | [optional] 
+**headerImage** | **String** |  | [optional] 
+**icon** | **String** |  | [optional] 
+**images** | **BuiltList&lt;String&gt;** |  | 
+**tags** | **BuiltList&lt;String&gt;** |  | 
+**element** | **String** |  | 
+**weaponType** | **String** |  | 
+**artifactSets** | [**GameCharactersControllerUpdateRequestOneOfArtifactSets**](GameCharactersControllerUpdateRequestOneOfArtifactSets.md) |  | 
+**constellation** | [**GameCharactersControllerUpdateRequestOneOfConstellation**](GameCharactersControllerUpdateRequestOneOfConstellation.md) |  | 
+**talents** | [**BuiltList&lt;GameCharactersControllerUpdateRequestOneOfTalentsInner&gt;**](GameCharactersControllerUpdateRequestOneOfTalentsInner.md) |  | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

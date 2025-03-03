@@ -17,130 +17,40 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(AdminAuthControllerSigninConfirmRequest.serializer)
       ..add(AdminAuthControllerSigninRequest.serializer)
       ..add(AdminAuthControllerSignupRequest.serializer)
-      ..add(ArtifactSets.serializer)
-      ..add(ArtifactSetsControllerUpdateRequest.serializer)
-      ..add(Artifacts.serializer)
-      ..add(CharactersControllerImportFromHoyoLabQueryParameter.serializer)
-      ..add(CharactersControllerImportRequest.serializer)
-      ..add(CharactersControllerImportRequestExt.serializer)
-      ..add(CharactersControllerImportRequestExtPostExt.serializer)
-      ..add(CharactersControllerImportRequestFilterValues.serializer)
-      ..add(CharactersControllerImportRequestFilterValuesCharacterProperty
-          .serializer)
-      ..add(CharactersControllerImportRequestFilterValuesCharacterPropertyKey
-          .serializer)
+      ..add(GameCharacter.serializer)
+      ..add(GameCharactersControllerCreateRequest.serializer)
+      ..add(GameCharactersControllerUpdateRequest.serializer)
+      ..add(GameCharactersControllerUpdateRequestCvInner.serializer)
+      ..add(GameCharactersControllerUpdateRequestOneOf.serializer)
+      ..add(GameCharactersControllerUpdateRequestOneOf1.serializer)
+      ..add(GameCharactersControllerUpdateRequestOneOf1GameEnum.serializer)
+      ..add(GameCharactersControllerUpdateRequestOneOf1SkillsInner.serializer)
       ..add(
-          CharactersControllerImportRequestFilterValuesCharacterPropertyValueTypesInner
-              .serializer)
-      ..add(CharactersControllerImportRequestModulesInner.serializer)
-      ..add(CharactersControllerImportRequestModulesInnerComponentsInner
+          GameCharactersControllerUpdateRequestOneOf1StigmatasInner.serializer)
+      ..add(GameCharactersControllerUpdateRequestOneOf1StigmatasInnerTypeEnum
           .serializer)
-      ..add(Country.serializer)
-      ..add(CreateCharacterRequest.serializer)
-      ..add(CreateCharacterRequestArtifactSetInner.serializer)
-      ..add(CreateCharacterRequestGalleriesInner.serializer)
-      ..add(CreateCharacterRequestRegion.serializer)
-      ..add(CreateCharacterRequestVersion.serializer)
-      ..add(CreateCharacterRequestWeapon.serializer)
-      ..add(GICharacter.serializer)
-      ..add(GalleriesControllerCreateRequest.serializer)
-      ..add(GalleriesControllerUpdateRequest.serializer)
-      ..add(Gallery.serializer)
-      ..add(HI3Characters.serializer)
-      ..add(HI3SkillsEntity.serializer)
-      ..add(HI3StigmatasEntity.serializer)
-      ..add(HI3WeaponsEntity.serializer)
-      ..add(Hi3CharactersControllerCreateRequest.serializer)
-      ..add(Hi3CharactersControllerCreateRequestSkillsInner.serializer)
-      ..add(Hi3CharactersControllerCreateRequestWeaponsInner.serializer)
-      ..add(Hi3CharactersControllerUpdateRequest.serializer)
-      ..add(Hi3CharactersControllerUpdateRequestSkillsInner.serializer)
-      ..add(Hi3CharactersControllerUpdateRequestStigmatasInner.serializer)
-      ..add(Hi3CharactersControllerUpdateRequestWeaponsInner.serializer)
-      ..add(RegionsControllerUpdateRequest.serializer)
-      ..add(UpdateCharacterRequest.serializer)
-      ..add(UpdateCharacterRequestArtifactSetInner.serializer)
-      ..add(UpdateCharacterRequestGalleriesInner.serializer)
-      ..add(UpdateCharacterRequestRegion.serializer)
-      ..add(UpdateCharacterRequestVersion.serializer)
-      ..add(UpdateCharacterRequestWeapon.serializer)
-      ..add(UpdateCharacterRequestWeaponVersion.serializer)
-      ..add(UpdateCharacterRequestWeaponVersionArtifactSetsInner.serializer)
-      ..add(UpdateCharacterRequestWeaponVersionRegionsInner.serializer)
-      ..add(VersionsControllerCreateRequest.serializer)
-      ..add(VersionsControllerUpdateRequest.serializer)
-      ..add(VersionsEntity.serializer)
-      ..add(Weapon.serializer)
-      ..add(WeaponsControllerUpdateRequest.serializer)
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(ArtifactSets)]),
-          () => new ListBuilder<ArtifactSets>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(ArtifactSets)]),
-          () => new ListBuilder<ArtifactSets>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(Gallery)]),
-          () => new ListBuilder<Gallery>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(Artifacts)]),
-          () => new ListBuilder<Artifacts>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(GICharacter)]),
-          () => new ListBuilder<GICharacter>())
+      ..add(GameCharactersControllerUpdateRequestOneOf1TypeEnum.serializer)
+      ..add(GameCharactersControllerUpdateRequestOneOf2.serializer)
+      ..add(GameCharactersControllerUpdateRequestOneOf2EidolonsInner.serializer)
+      ..add(GameCharactersControllerUpdateRequestOneOf2GameEnum.serializer)
+      ..add(GameCharactersControllerUpdateRequestOneOf2RelicsInner.serializer)
+      ..add(GameCharactersControllerUpdateRequestOneOf2TracesInner.serializer)
+      ..add(GameCharactersControllerUpdateRequestOneOf2TracesInnerTypeEnum
+          .serializer)
+      ..add(GameCharactersControllerUpdateRequestOneOf2VideosInner.serializer)
+      ..add(GameCharactersControllerUpdateRequestOneOfArtifactSets.serializer)
+      ..add(GameCharactersControllerUpdateRequestOneOfConstellation.serializer)
+      ..add(GameCharactersControllerUpdateRequestOneOfConstellationEffectsInner
+          .serializer)
+      ..add(GameCharactersControllerUpdateRequestOneOfElementEnum.serializer)
+      ..add(GameCharactersControllerUpdateRequestOneOfGameEnum.serializer)
+      ..add(GameCharactersControllerUpdateRequestOneOfTalentsInner.serializer)
+      ..add(GameCharactersControllerUpdateRequestOneOfWeaponTypeEnum.serializer)
       ..addBuilderFactory(
           const FullType(BuiltList, const [
-            const FullType(CharactersControllerImportRequestModulesInner)
+            const FullType(GameCharactersControllerUpdateRequestCvInner)
           ]),
-          () =>
-              new ListBuilder<CharactersControllerImportRequestModulesInner>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                CharactersControllerImportRequestModulesInnerComponentsInner)
-          ]),
-          () => new ListBuilder<
-              CharactersControllerImportRequestModulesInnerComponentsInner>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(CreateCharacterRequestGalleriesInner)]),
-          () => new ListBuilder<CreateCharacterRequestGalleriesInner>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(CreateCharacterRequestArtifactSetInner)]),
-          () => new ListBuilder<CreateCharacterRequestArtifactSetInner>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(GICharacter)]),
-          () => new ListBuilder<GICharacter>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(GICharacter)]),
-          () => new ListBuilder<GICharacter>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(GICharacter)]),
-          () => new ListBuilder<GICharacter>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(Weapon)]),
-          () => new ListBuilder<Weapon>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(ArtifactSets)]),
-          () => new ListBuilder<ArtifactSets>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(Country)]),
-          () => new ListBuilder<Country>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(Artifacts)]),
-          () => new ListBuilder<Artifacts>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(HI3SkillsEntity)]),
-          () => new ListBuilder<HI3SkillsEntity>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(HI3StigmatasEntity)]),
-          () => new ListBuilder<HI3StigmatasEntity>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(HI3WeaponsEntity)]),
-          () => new ListBuilder<HI3WeaponsEntity>())
+          () => new ListBuilder<GameCharactersControllerUpdateRequestCvInner>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
@@ -150,95 +60,90 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(
-                CharactersControllerImportRequestFilterValuesCharacterPropertyValueTypesInner)
+                GameCharactersControllerUpdateRequestOneOf1StigmatasInner)
           ]),
           () => new ListBuilder<
-              CharactersControllerImportRequestFilterValuesCharacterPropertyValueTypesInner>())
+              GameCharactersControllerUpdateRequestOneOf1StigmatasInner>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
-            const FullType(UpdateCharacterRequestWeaponVersionArtifactSetsInner)
+            const FullType(
+                GameCharactersControllerUpdateRequestOneOf1SkillsInner)
           ]),
           () => new ListBuilder<
-              UpdateCharacterRequestWeaponVersionArtifactSetsInner>())
+              GameCharactersControllerUpdateRequestOneOf1SkillsInner>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
-            const FullType(UpdateCharacterRequestWeaponVersionRegionsInner)
+            const FullType(GameCharactersControllerUpdateRequestCvInner)
+          ]),
+          () => new ListBuilder<GameCharactersControllerUpdateRequestCvInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GameCharactersControllerUpdateRequestOneOf2RelicsInner)
           ]),
           () => new ListBuilder<
-              UpdateCharacterRequestWeaponVersionRegionsInner>())
+              GameCharactersControllerUpdateRequestOneOf2RelicsInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
-            const FullType(UpdateCharacterRequestWeaponVersionArtifactSetsInner)
+            const FullType(
+                GameCharactersControllerUpdateRequestOneOf2EidolonsInner)
           ]),
           () => new ListBuilder<
-              UpdateCharacterRequestWeaponVersionArtifactSetsInner>())
+              GameCharactersControllerUpdateRequestOneOf2EidolonsInner>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
-            const FullType(UpdateCharacterRequestWeaponVersionRegionsInner)
+            const FullType(
+                GameCharactersControllerUpdateRequestOneOf2TracesInner)
           ]),
           () => new ListBuilder<
-              UpdateCharacterRequestWeaponVersionRegionsInner>())
+              GameCharactersControllerUpdateRequestOneOf2TracesInner>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
-            const FullType(UpdateCharacterRequestWeaponVersionArtifactSetsInner)
+            const FullType(
+                GameCharactersControllerUpdateRequestOneOf2VideosInner)
           ]),
           () => new ListBuilder<
-              UpdateCharacterRequestWeaponVersionArtifactSetsInner>())
+              GameCharactersControllerUpdateRequestOneOf2VideosInner>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
-            const FullType(UpdateCharacterRequestWeaponVersionRegionsInner)
+            const FullType(GameCharactersControllerUpdateRequestCvInner)
+          ]),
+          () => new ListBuilder<GameCharactersControllerUpdateRequestCvInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GameCharactersControllerUpdateRequestOneOfTalentsInner)
           ]),
           () => new ListBuilder<
-              UpdateCharacterRequestWeaponVersionRegionsInner>())
+              GameCharactersControllerUpdateRequestOneOfTalentsInner>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
-            const FullType.nullable(
-                Hi3CharactersControllerCreateRequestSkillsInner)
+            const FullType(
+                GameCharactersControllerUpdateRequestOneOfConstellationEffectsInner)
           ]),
           () => new ListBuilder<
-              Hi3CharactersControllerCreateRequestSkillsInner?>())
+              GameCharactersControllerUpdateRequestOneOfConstellationEffectsInner>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(Hi3CharactersControllerCreateRequestWeaponsInner)
-          ]),
-          () => new ListBuilder<
-              Hi3CharactersControllerCreateRequestWeaponsInner>())
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(Hi3CharactersControllerUpdateRequestStigmatasInner)
-          ]),
-          () => new ListBuilder<
-              Hi3CharactersControllerUpdateRequestStigmatasInner>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType.nullable(
-                Hi3CharactersControllerUpdateRequestSkillsInner)
-          ]),
-          () => new ListBuilder<
-              Hi3CharactersControllerUpdateRequestSkillsInner?>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType.nullable(
-                Hi3CharactersControllerUpdateRequestWeaponsInner)
-          ]),
-          () => new ListBuilder<
-              Hi3CharactersControllerUpdateRequestWeaponsInner?>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(Hi3CharactersControllerUpdateRequestStigmatasInner)
-          ]),
-          () => new ListBuilder<
-              Hi3CharactersControllerUpdateRequestStigmatasInner>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType.nullable(UpdateCharacterRequestGalleriesInner)
-          ]),
-          () => new ListBuilder<UpdateCharacterRequestGalleriesInner?>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType.nullable(UpdateCharacterRequestArtifactSetInner)
-          ]),
-          () => new ListBuilder<UpdateCharacterRequestArtifactSetInner?>()))
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>()))
     .build();
 
 // ignore_for_file: deprecated_member_use_from_same_package,type=lint
