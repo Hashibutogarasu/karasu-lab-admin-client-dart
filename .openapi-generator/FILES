@@ -1,4 +1,5 @@
 .gitignore
+.openapi-generator-ignore
 README.md
 analysis_options.yaml
 doc/AdminAuthApi.md
@@ -69,6 +70,16 @@ lib/src/model/game_characters_controller_update_request_one_of_constellation_eff
 lib/src/model/game_characters_controller_update_request_one_of_talents_inner.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/admin_auth_api_test.dart
+test/admin_auth_controller_change_password_request_test.dart
+test/admin_auth_controller_disable_mfa_request_test.dart
+test/admin_auth_controller_enable_mfa_request_test.dart
+test/admin_auth_controller_forgot_password_request_test.dart
+test/admin_auth_controller_refresh_token_request_test.dart
+test/admin_auth_controller_set_up_mfa_request_test.dart
+test/admin_auth_controller_signin_confirm_request_test.dart
+test/admin_auth_controller_signin_request_test.dart
+test/admin_auth_controller_signup_request_test.dart
 test/game_character_test.dart
 test/game_characters_api_test.dart
 test/game_characters_controller_create_request_test.dart
